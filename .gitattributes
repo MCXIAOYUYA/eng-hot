@@ -1,0 +1,5 @@
+# 统一用 LF,避免 Windows 本地与 Linux CI 之间因换行符产生噪声 diff
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary

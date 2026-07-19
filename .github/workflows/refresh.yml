@@ -1,0 +1,59 @@
+name: Refresh data
+
+# 每天定时重跑流水线,把最新抓取写回 web/src/data.js 并提交。
+# 也可在 Actions 页手动触发(workflow_dispatch)。
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 每天 23:00 UTC = 北京时间次日 07:00
+  workflow_dispatch: {}
+
+# 允许 job 用 GITHUB_TOKEN 把更新推回仓库
+permissions:
+  contents: write
+
+# 同一时刻只跑一份,避免并发提交打架
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run pipeline
+        env:
+          # 在仓库 Settings → Secrets → Actions 里加 ANTHROPIC_API_KEY 即启用 AI 中文改写;
+          # 没配也能跑,自动降级到 --no-ai(中文摘要来自 editorial.json)。
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            echo "== 全量:抓取 + AI + 热度 =="
+            python pipeline/pipeline.py
+          else
+            echo "== 抓取 + 编辑覆盖 + 热度(无 API key,降级 --no-ai) =="
+            python pipeline/pipeline.py --no-ai
+          fi
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "eng-hot-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/src/data.js pipeline/raw_items.json
+          if git diff --staged --quiet; then
+            echo "无变化,跳过提交"
+          else
+            git commit -m "chore(data): 每日刷新 $(date -u +%Y-%m-%d)"
+            git push
+          fi
