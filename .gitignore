@@ -2,6 +2,11 @@
 web/node_modules/
 node_modules/
 
+# 锁文件:在 Windows 生成的 package-lock.json 只含 win32 原生二进制,
+# 提交后会让 Linux CI 的构建缺 rollup/esbuild linux 二进制而失败。
+# CI 用 npm install 现场解析,不需要锁文件,故不提交。
+package-lock.json
+
 # 构建产物
 web/dist/
 dist/
