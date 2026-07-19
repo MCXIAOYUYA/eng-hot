@@ -41,8 +41,12 @@ jobs:
 
       - name: Install & build
         working-directory: web
+        # 用 npm install 而非 npm ci:package-lock.json 在 Windows 生成,
+        # 只含 win32 平台的原生二进制(rollup/esbuild);npm ci 严格照锁文件安装,
+        # 在 Linux runner 上会缺 @rollup/rollup-linux-x64-gnu 导致 vite build 失败。
+        # npm install 会按 runner 实际平台补齐 optional 依赖。
         run: |
-          npm ci
+          npm install --no-audit --no-fund
           npm run build
 
       - name: Upload Pages artifact
