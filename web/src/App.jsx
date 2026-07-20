@@ -28,9 +28,11 @@ import { ITEMS } from "./data.js";
 function ThemeStyle() {
   return (
     <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
-    .ehot{--bg:#0F1626;--bg2:#0B1120;--panel:#161F33;--panel2:#1B2540;--gold:#FFB100;--paper:#F2EDE4;--mint:#3ECFA0;--muted:#8391A6;--sub:#aeb8c8;--line:rgba(242,237,228,.1);--fill:#F2EDE4;--fill-fg:#0F1626;--topbar:rgba(15,22,38,.92);--shadow:0 8px 30px rgba(0,0,0,.35);
-      background:var(--bg);color:var(--paper);font-family:"Noto Sans SC",system-ui,sans-serif;line-height:1.6;min-height:100vh;display:flex;transition:background .2s,color .2s}
+    /* 字体:Playfair / Space Grotesk 自托管(见 src/fonts.css),中文走系统字体栈。
+       原来这里 @import Google Fonts —— 目标用户在中国大陆根本加载不到,整套视觉静默降级;
+       中文字体更不该走 CDN,一个 Noto Sans SC 全量子集是好几 MB。 */
+    .ehot{--cn:system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;--bg:#0F1626;--bg2:#0B1120;--panel:#161F33;--panel2:#1B2540;--gold:#FFB100;--paper:#F2EDE4;--mint:#3ECFA0;--muted:#8391A6;--sub:#aeb8c8;--line:rgba(242,237,228,.1);--fill:#F2EDE4;--fill-fg:#0F1626;--topbar:rgba(15,22,38,.92);--shadow:0 8px 30px rgba(0,0,0,.35);
+      background:var(--bg);color:var(--paper);font-family:var(--cn);line-height:1.6;min-height:100vh;display:flex;transition:background .2s,color .2s}
     .ehot.light{--bg:#F5F1E8;--bg2:#FFFFFF;--panel:#FFFFFF;--panel2:#FBF6EC;--paper:#1B2233;--muted:#6B7688;--sub:#5A6478;--line:rgba(24,34,54,.1);--fill:#1B2233;--fill-fg:#F5F1E8;--topbar:rgba(245,241,232,.9);--shadow:0 8px 26px rgba(24,34,54,.1)}
     .ehot *{box-sizing:border-box;margin:0;padding:0}
     .ehot ::selection{background:var(--gold);color:#0F1626}
@@ -45,7 +47,7 @@ function ThemeStyle() {
     .brand small{color:var(--gold)}
     .tagline{font-size:11.5px;color:var(--muted);margin-bottom:22px;padding-left:2px}
     .navgrp{font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.22em;font-size:10.5px;color:var(--muted);margin:18px 0 8px;padding-left:8px}
-    .navitem{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;cursor:pointer;color:var(--muted);font-family:"Noto Sans SC";font-size:14.5px;font-weight:500;padding:9px 10px;border-radius:6px;transition:.14s;border-left:2px solid transparent}
+    .navitem{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;cursor:pointer;color:var(--muted);font-family:var(--cn);font-size:14.5px;font-weight:500;padding:9px 10px;border-radius:6px;transition:.14s;border-left:2px solid transparent}
     .navitem:hover{color:var(--paper);background:rgba(131,145,166,.12)}
     .navitem.on{color:var(--paper);background:rgba(255,177,0,.14);border-left-color:var(--gold)}
     .navitem .cnt{margin-left:auto;font-family:"Space Grotesk";font-size:12px;color:var(--muted);background:rgba(131,145,166,.15);padding:1px 7px;border-radius:8px}
@@ -61,7 +63,7 @@ function ThemeStyle() {
     /* 主区 */
     .main{flex:1;min-width:0}
     .topbar{position:sticky;top:0;z-index:10;background:var(--topbar);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:18px clamp(18px,4vw,44px);display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .topbar h1{font-family:"Noto Sans SC";font-weight:900;font-size:clamp(22px,3vw,30px);letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+    .topbar h1{font-family:var(--cn);font-weight:900;font-size:clamp(22px,3vw,30px);letter-spacing:.02em;display:flex;align-items:center;gap:10px}
     .topbar h1 .ic{color:var(--gold)}
     .topbar .desc{font-size:12.5px;color:var(--muted);margin-top:3px}
     .sortbtn{display:flex;align-items:center;gap:7px;font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:12.5px;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:9px 15px;border-radius:8px;cursor:pointer;transition:.14s}
@@ -77,7 +79,7 @@ function ThemeStyle() {
     .hero .badge{display:inline-flex;align-items:center;gap:6px;font-family:"Space Grotesk";font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:#0F1626;background:var(--gold);padding:4px 11px;border-radius:99px}
     .hero .day{font-family:"Space Grotesk";font-size:13px;color:var(--muted)}
     .hero .htop{font-family:"Playfair Display";font-style:italic;font-size:14px;color:var(--gold);margin-left:auto}
-    .hero h2{font-family:"Noto Sans SC";font-weight:900;font-size:clamp(20px,2.6vw,26px);line-height:1.35;margin-bottom:10px;position:relative;z-index:1}
+    .hero h2{font-family:var(--cn);font-weight:900;font-size:clamp(20px,2.6vw,26px);line-height:1.35;margin-bottom:10px;position:relative;z-index:1}
     .hero p{font-size:14px;color:var(--sub);margin-bottom:14px;max-width:640px;position:relative;z-index:1}
     .hero .foot{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);position:relative;z-index:1}
     .hero .go{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-family:"Space Grotesk";font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12px;color:var(--gold)}
@@ -87,7 +89,7 @@ function ThemeStyle() {
 
     /* 主题筛选条 */
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-    .chip{font-family:"Noto Sans SC";font-weight:600;font-size:12.5px;background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:6px 14px;border-radius:99px;cursor:pointer;transition:.14s}
+    .chip{font-family:var(--cn);font-weight:600;font-size:12.5px;background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:6px 14px;border-radius:99px;cursor:pointer;transition:.14s}
     .chip:hover{color:var(--paper)}
     .chip.on{color:#0F1626;font-weight:700}
 
@@ -100,14 +102,28 @@ function ThemeStyle() {
     .heat .bars{display:flex;gap:2px;align-items:flex-end;height:14px}
     .heat .bars i{width:3px;background:var(--gold);opacity:.3}
     .heat .bars i.hot{opacity:1}
-    .ttag{font-family:"Noto Sans SC";font-weight:700;font-size:11px;padding:2px 9px;border:1px solid;border-radius:99px}
+    .ttag{font-family:var(--cn);font-weight:700;font-size:11px;padding:2px 9px;border:1px solid;border-radius:99px}
     .feat-badge{display:inline-flex;align-items:center;gap:4px;font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;color:var(--gold)}
     .card .date{margin-left:auto;font-family:"Space Grotesk";font-size:12px;color:var(--muted)}
-    .card h3{font-family:"Noto Sans SC";font-weight:700;font-size:17px;line-height:1.45;margin-bottom:6px}
+    .card h3{font-family:var(--cn);font-weight:700;font-size:17px;line-height:1.45;margin-bottom:6px}
     .card p{font-size:13.5px;color:var(--sub);margin-bottom:10px}
     .reason{display:flex;gap:8px;align-items:flex-start;background:rgba(255,177,0,.07);border-left:2px solid var(--gold);border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:12px;font-size:12.5px;color:var(--sub);line-height:1.55}
     .reason .qic{color:var(--gold);flex:none;margin-top:2px}
     .reason b{color:var(--paper);font-weight:700}
+    /* 英文原文导语 —— 对英语学习站来说这是材料,不是"没翻译的噪声" */
+    .leaden{border-left:2px solid rgba(131,145,166,.4);padding:2px 0 2px 11px;margin-bottom:11px;font-size:13px;color:var(--sub);line-height:1.6}
+    .leaden .tag{display:block;font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.16em;font-size:9.5px;color:var(--muted);margin-bottom:3px}
+
+    /* 重点表达 —— 站内真正能"带走"的东西 */
+    .expr{background:rgba(62,207,160,.06);border:1px solid rgba(62,207,160,.22);border-radius:8px;padding:10px 13px;margin-bottom:12px}
+    .expr .eh{display:flex;align-items:center;gap:6px;font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--mint);margin-bottom:8px}
+    .expr .list{display:flex;flex-direction:column;gap:6px}
+    .expr .e{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:13px;line-height:1.5}
+    .expr .en{font-weight:700;color:var(--paper)}
+    .expr .cn{color:var(--sub)}
+    .expr .note{width:100%;font-size:11.5px;color:var(--muted);padding-left:1px}
+    .expr .more{font-size:11.5px;color:var(--muted);margin-top:7px}
+
     .card .row2{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
     .card .src{display:inline-flex;align-items:center;gap:5px}
     .card .act{margin-left:auto;display:flex;align-items:center;gap:8px}
@@ -129,7 +145,7 @@ function ThemeStyle() {
     .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
     .tcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px;cursor:pointer;transition:.16s;position:relative;overflow:hidden;box-shadow:var(--shadow)}
     .tcard:hover{transform:translateY(-3px);border-color:rgba(255,177,0,.4)}
-    .tcard .tt{font-family:"Noto Sans SC";font-weight:900;font-size:19px;margin-bottom:4px}
+    .tcard .tt{font-family:var(--cn);font-weight:900;font-size:19px;margin-bottom:4px}
     .tcard .tn{font-family:"Space Grotesk";font-size:13px;color:var(--muted)}
     .tcard .glow{position:absolute;right:-20px;top:-20px;width:70px;height:70px;border-radius:50%;filter:blur(24px);opacity:.5}
 
@@ -142,7 +158,7 @@ function ThemeStyle() {
     @keyframes slide{from{transform:translateX(30px);opacity:.4}to{transform:none;opacity:1}}
     .drawer .close{float:right;background:none;border:1px solid var(--line);border-radius:6px;color:var(--muted);cursor:pointer;font-size:13px;padding:5px 12px;font-family:"Space Grotesk";letter-spacing:.08em}
     .drawer .close:hover{color:var(--paper);border-color:var(--paper)}
-    .drawer h2{font-family:"Noto Sans SC";font-weight:900;font-size:24px;margin:4px 0 8px}
+    .drawer h2{font-family:var(--cn);font-weight:900;font-size:24px;margin:4px 0 8px}
     .drawer .lead{font-size:14px;color:var(--sub);margin-bottom:14px}
     .drawer .dreason{display:flex;gap:9px;align-items:flex-start;background:rgba(255,177,0,.08);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:16px;font-size:13.5px;color:var(--sub);line-height:1.6}
     .drawer .dreason .qic{color:var(--gold);flex:none;margin-top:2px}
@@ -210,6 +226,39 @@ function HeatBar({ heat }) {
   );
 }
 
+/* 重点表达 —— 卡片上只露 3 条(够扫一眼带走),抽屉里给全。
+   没有 expressions 的条目直接不渲染:宁可少一块,也不编内容凑数。 */
+function Expressions({ list, limit }) {
+  if (!list?.length) return null;
+  const shown = limit ? list.slice(0, limit) : list;
+  const rest = list.length - shown.length;
+  return (
+    <div className="expr">
+      <div className="eh"><BookOpen size={12} /> 带走这 {list.length} 个表达</div>
+      <div className="list">
+        {shown.map((e, i) => (
+          <div className="e" key={i}>
+            <span className="en">{e.en}</span>
+            <span className="cn">{e.cn}</span>
+            {!limit && e.note && <span className="note">{e.note}</span>}
+          </div>
+        ))}
+      </div>
+      {rest > 0 && <div className="more">点开还有 {rest} 个 ↓</div>}
+    </div>
+  );
+}
+
+function LeadEn({ text }) {
+  if (!text) return null;
+  return (
+    <div className="leaden">
+      <span className="tag">原文导语</span>
+      {text}
+    </div>
+  );
+}
+
 function Hero({ item, dateLabel, onOpen }) {
   const tp = topicOf(item.topic);
   const cluster = (item.sources?.length || 0);
@@ -249,6 +298,8 @@ function FeedCard({ item, starred, onStar, onOpen }) {
       {item.reason && (
         <div className="reason"><Quote className="qic" size={13} /><span><b>推荐理由 · </b>{item.reason}</span></div>
       )}
+      <LeadEn text={item.lead_en} />
+      <Expressions list={item.expressions} limit={3} />
       <div className="row2">
         <span className="src"><Hash size={12} />{item.source}</span>
         {cluster > 1 && <span className="cluster"><Layers size={11} /> {cluster} 个信源</span>}
@@ -334,6 +385,8 @@ function Drawer({ item, onClose }) {
         {item.reason && (
           <div className="dreason"><Quote className="qic" size={15} /><span><b>推荐理由 · </b>{item.reason}</span></div>
         )}
+        <LeadEn text={item.lead_en} />
+        <Expressions list={item.expressions} />
         <p className="srcline">信源 <a href={item.url} target="_blank" rel="noreferrer">{item.source} ↗</a> · {when(item)} · 摘要为聚合整理,版权归原作者</p>
         {cluster > 1 && (
           <div className="srcbox">
@@ -415,17 +468,17 @@ export default function EnglishHot() {
   const meta = VIEW_META[view];
   const showChips = view === "all" || view === "featured" || view === "starred";
 
-  // 今日热点:全站热度最高的一条(TOP 1)
-  const hero = useMemo(() => {
-    if (!ITEMS.length) return null;
-    return [...ITEMS].sort((a, b) => b.heat - a.heat)[0];
-  }, []);
-  const heroDate = useMemo(() => {
-    if (!ITEMS.length) return "";
+  // 今日热点:最新那天里热度最高的一条。
+  // 注意条目和日期必须取自同一条 —— 以前 hero 取全站最热、日期取全站最新,
+  // 两者不是同一条时会出现「7月20日」配一条 7月18 的内容。
+  const [hero, heroDate] = useMemo(() => {
+    if (!ITEMS.length) return [null, ""];
     const latest = ITEMS.reduce((m, i) => (i.captured > m ? i.captured : m), ITEMS[0].captured);
-    const d = new Date(latest);
+    const top = ITEMS.filter((i) => i.captured === latest)
+      .reduce((a, b) => (b.heat > a.heat ? b : a));
+    const d = new Date(top.captured);
     const wd = ["日", "一", "二", "三", "四", "五", "六"][d.getDay()];
-    return `${d.getMonth() + 1}月${d.getDate()}日 · 周${wd}`;
+    return [top, `${d.getMonth() + 1}月${d.getDate()}日 · 周${wd}`];
   }, []);
   const showHero = hero && (view === "featured" || view === "all") && !topic;
 

@@ -1,4 +1,4 @@
-// 由 pipeline.py 自动生成,勿手改 · 2026-07-20 19:09 UTC
+// 由 pipeline.py 自动生成,勿手改 · 2026-07-20 19:25 UTC
 export const ITEMS = [
   {
     "id": "cd005679d3",
@@ -9,13 +9,15 @@ export const ITEMS = [
     "captured": "2026-07-20",
     "published": "2026-07-20",
     "time": "00:30",
-    "summary": "Jul 20, 2026. Anthropologists have discovered a previously unknown monkey that has distinctive orange lips and a deep roaring whoop.",
-    "reason": "",
+    "summary": "Breaking News English 当日分级新闻。同一篇配多档难度与慢速音频,生词表、填空、讨论题齐全,适合当天泛读一遍再精读一遍。",
+    "reason": "每天更新、难度可选,是最容易坚持下来的日更阅读材料 —— 先挑一档读完,别贪多。",
     "topic": "reading",
     "featured": false,
     "heat": 74,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Anthropologists have discovered a previously unknown monkey that has distinctive orange lips and a deep roaring whoop.",
+    "expressions": []
   },
   {
     "id": "b774a24ced",
@@ -33,6 +35,23 @@ export const ITEMS = [
     "heat": 72,
     "sources": [],
     "lang": "en",
+    "lead_en": "How do footballers cope with high-pressure scenarios like penalties and corners?",
+    "expressions": [
+      {
+        "en": "cope with",
+        "cn": "应对、扛得住",
+        "note": "后接压力、困难"
+      },
+      {
+        "en": "under pressure",
+        "cn": "在压力之下",
+        "note": "高压时刻的固定说法"
+      },
+      {
+        "en": "penalty",
+        "cn": "点球、罚球"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -55,7 +74,9 @@ export const ITEMS = [
       "沪江英语",
       "中国教育在线"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "df834af182",
@@ -73,6 +94,14 @@ export const ITEMS = [
     "heat": 70,
     "sources": [],
     "lang": "en",
+    "lead_en": "Use this expression to talk about busy adult life",
+    "expressions": [
+      {
+        "en": "like passing ships",
+        "cn": "擦肩而过、总碰不上面",
+        "note": "完整说法 like passing ships in the night"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -91,6 +120,17 @@ export const ITEMS = [
     "heat": 68,
     "sources": [],
     "lang": "en",
+    "lead_en": "It's Anna and Tom's big day! Will Anna say 'I do'?",
+    "expressions": [
+      {
+        "en": "I do",
+        "cn": "（婚礼上）我愿意"
+      },
+      {
+        "en": "the big day",
+        "cn": "大喜之日、重要的日子"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -109,6 +149,8 @@ export const ITEMS = [
     "heat": 66,
     "sources": [],
     "lang": "zh",
+    "lead_en": "",
+    "expressions": [],
     "evergreen": true,
     "phases": [
       {
@@ -173,6 +215,23 @@ export const ITEMS = [
     "heat": 60,
     "sources": [],
     "lang": "en",
+    "lead_en": "How often do you cycle?",
+    "expressions": [
+      {
+        "en": "commute",
+        "cn": "通勤",
+        "note": "名词动词同形，commute to work"
+      },
+      {
+        "en": "cycle",
+        "cn": "骑车",
+        "note": "英式常用，美式多说 bike"
+      },
+      {
+        "en": "environment",
+        "cn": "环境"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -191,6 +250,23 @@ export const ITEMS = [
     "heat": 60,
     "sources": [],
     "lang": "en",
+    "lead_en": "Have you ever received an uncivil email?",
+    "expressions": [
+      {
+        "en": "rude",
+        "cn": "无礼的、粗鲁的"
+      },
+      {
+        "en": "uncivil",
+        "cn": "失礼的、不客气的",
+        "note": "比 rude 更书面"
+      },
+      {
+        "en": "tone",
+        "cn": "语气",
+        "note": "邮件里常说 the tone of the email"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -209,6 +285,22 @@ export const ITEMS = [
     "heat": 60,
     "sources": [],
     "lang": "en",
+    "lead_en": "What foods did you dislike when you were growing up?",
+    "expressions": [
+      {
+        "en": "stress-free",
+        "cn": "毫无压力的"
+      },
+      {
+        "en": "mealtime",
+        "cn": "用餐时间"
+      },
+      {
+        "en": "picky",
+        "cn": "挑剔的、挑食的",
+        "note": "a picky eater 挑食的人"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -227,6 +319,22 @@ export const ITEMS = [
     "heat": 60,
     "sources": [],
     "lang": "en",
+    "lead_en": "Children are spending too much time with electronic devices.",
+    "expressions": [
+      {
+        "en": "screen time",
+        "cn": "用屏时间"
+      },
+      {
+        "en": "device",
+        "cn": "电子设备"
+      },
+      {
+        "en": "limit",
+        "cn": "限制",
+        "note": "limit screen time 限制用屏时间"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -245,6 +353,22 @@ export const ITEMS = [
     "heat": 60,
     "sources": [],
     "lang": "en",
+    "lead_en": "When was the last time you bought something you didn't need?",
+    "expressions": [
+      {
+        "en": "advertise",
+        "cn": "打广告、宣传"
+      },
+      {
+        "en": "consumer",
+        "cn": "消费者"
+      },
+      {
+        "en": "tempt",
+        "cn": "诱惑、勾起购买欲",
+        "note": "be tempted to buy 忍不住想买"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -263,6 +387,22 @@ export const ITEMS = [
     "heat": 60,
     "sources": [],
     "lang": "en",
+    "lead_en": "Do you ever read or write poetry?",
+    "expressions": [
+      {
+        "en": "poetry",
+        "cn": "诗歌（总称）",
+        "note": "不可数；一首诗是 a poem"
+      },
+      {
+        "en": "rhythm",
+        "cn": "韵律、节奏"
+      },
+      {
+        "en": "emotion",
+        "cn": "情感"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -284,7 +424,9 @@ export const ITEMS = [
       "少数派",
       "小红书话题"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "a516e0b087",
@@ -295,13 +437,15 @@ export const ITEMS = [
     "captured": "2026-07-20",
     "published": "",
     "time": "",
-    "summary": "Sometimes you want to do something different. Learn an expression to talk about that here.",
-    "reason": "",
+    "summary": "BBC The English We Speak 本期讲一个地道表达。3 分钟一集,把用法、语境和例句讲透,教材里通常学不到。",
+    "reason": "3 分钟攒一个地道说法,积少成多,口语和写作立刻不土。",
     "topic": "vocab",
     "featured": false,
     "heat": 58,
     "sources": [],
     "lang": "en",
+    "lead_en": "Sometimes you want to do something different. Learn an expression to talk about that here.",
+    "expressions": [],
     "evergreen": true
   },
   {
@@ -320,6 +464,14 @@ export const ITEMS = [
     "heat": 58,
     "sources": [],
     "lang": "en",
+    "lead_en": "My friend dressed up as a fairy for the costume party – she understood the assignment",
+    "expressions": [
+      {
+        "en": "understood the assignment",
+        "cn": "完全领会要求、做得恰到好处",
+        "note": "社媒流行语，夸人做得到位"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -338,6 +490,14 @@ export const ITEMS = [
     "heat": 58,
     "sources": [],
     "lang": "en",
+    "lead_en": "You might be onto something.",
+    "expressions": [
+      {
+        "en": "be onto something",
+        "cn": "思路对了、这想法有戏",
+        "note": "别和 be onto someone（识破某人）混"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -356,6 +516,14 @@ export const ITEMS = [
     "heat": 58,
     "sources": [],
     "lang": "en",
+    "lead_en": "Don't sell yourself short!",
+    "expressions": [
+      {
+        "en": "sell yourself short",
+        "cn": "低估自己、把自己看轻",
+        "note": "常用 Don't sell yourself short"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -374,6 +542,14 @@ export const ITEMS = [
     "heat": 58,
     "sources": [],
     "lang": "en",
+    "lead_en": "What do you need to think about when wrapping up a project?",
+    "expressions": [
+      {
+        "en": "wrap it up",
+        "cn": "收尾、结束（会议/项目）",
+        "note": "开会收尾万能句 Let's wrap it up"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -392,6 +568,8 @@ export const ITEMS = [
     "heat": 58,
     "sources": [],
     "lang": "zh",
+    "lead_en": "",
+    "expressions": [],
     "evergreen": true
   },
   {
@@ -410,6 +588,8 @@ export const ITEMS = [
     "heat": 58,
     "sources": [],
     "lang": "zh",
+    "lead_en": "",
+    "expressions": [],
     "evergreen": true
   },
   {
@@ -427,7 +607,24 @@ export const ITEMS = [
     "featured": true,
     "heat": 57,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "A new study says knee surgery may do more harm than good.",
+    "expressions": [
+      {
+        "en": "do more harm than good",
+        "cn": "弊大于利"
+      },
+      {
+        "en": "surgery",
+        "cn": "手术",
+        "note": "不可数，have surgery 做手术"
+      },
+      {
+        "en": "study",
+        "cn": "研究",
+        "note": "A study suggests… 外刊高频开头"
+      }
+    ]
   },
   {
     "id": "6172588e76",
@@ -445,6 +642,17 @@ export const ITEMS = [
     "heat": 56,
     "sources": [],
     "lang": "en",
+    "lead_en": "Just as Tom leaves to start a new life in Australia, Anna realises her true feelings. Will she be able to catch him before he's gone for good?",
+    "expressions": [
+      {
+        "en": "change one's mind",
+        "cn": "改变主意"
+      },
+      {
+        "en": "have feelings for sb",
+        "cn": "对某人有感觉"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -463,6 +671,18 @@ export const ITEMS = [
     "heat": 56,
     "sources": [],
     "lang": "en",
+    "lead_en": "Tom's walked out after Anna rejected his marriage proposal. Will things at Tip Top Trading ever be the same again?",
+    "expressions": [
+      {
+        "en": "get down to business",
+        "cn": "言归正传、开始谈正事",
+        "note": "开会切入正题的经典句"
+      },
+      {
+        "en": "back to normal",
+        "cn": "回到从前、恢复正常"
+      }
+    ],
     "evergreen": true
   },
   {
@@ -483,7 +703,9 @@ export const ITEMS = [
       "沪江英语",
       "考研帮"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-toefl-autumn",
@@ -503,7 +725,9 @@ export const ITEMS = [
       "托福官方",
       "小红书话题"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-shadowing-guide",
@@ -521,6 +745,8 @@ export const ITEMS = [
     "heat": 54,
     "sources": [],
     "lang": "zh",
+    "lead_en": "",
+    "expressions": [],
     "evergreen": true,
     "phases": [
       {
@@ -585,6 +811,8 @@ export const ITEMS = [
     "heat": 54,
     "sources": [],
     "lang": "zh",
+    "lead_en": "",
+    "expressions": [],
     "evergreen": true
   },
   {
@@ -603,6 +831,8 @@ export const ITEMS = [
     "heat": 54,
     "sources": [],
     "lang": "zh",
+    "lead_en": "",
+    "expressions": [],
     "evergreen": true
   },
   {
@@ -620,7 +850,9 @@ export const ITEMS = [
     "featured": false,
     "heat": 53,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-ielts-seats",
@@ -640,7 +872,9 @@ export const ITEMS = [
       "中国教育在线",
       "雅思官方"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-writing-template",
@@ -661,7 +895,9 @@ export const ITEMS = [
       "考研帮",
       "知乎话题"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-chinadaily-citywalk",
@@ -678,7 +914,9 @@ export const ITEMS = [
     "featured": false,
     "heat": 49,
     "sources": [],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-gaokao-listening",
@@ -699,7 +937,9 @@ export const ITEMS = [
       "各省教育考试院",
       "澎湃新闻"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "seed-economist-ai-jobs",
@@ -719,7 +959,9 @@ export const ITEMS = [
       "外刊精读",
       "经济学人商论"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "793409d269",
@@ -736,7 +978,23 @@ export const ITEMS = [
     "featured": true,
     "heat": 46,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Memory chip price hikes have caused tech giants Apple and Microsoft to raise prices for some of their products.",
+    "expressions": [
+      {
+        "en": "price hike",
+        "cn": "涨价",
+        "note": "外刊财经高频，比 price increase 更口语"
+      },
+      {
+        "en": "tech giant",
+        "cn": "科技巨头"
+      },
+      {
+        "en": "raise prices",
+        "cn": "上调价格"
+      }
+    ]
   },
   {
     "id": "36ab56e6e9",
@@ -753,7 +1011,22 @@ export const ITEMS = [
     "featured": false,
     "heat": 38,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "The Bayeux Tapestry has returned to Britain for the first time in more than 900 years.",
+    "expressions": [
+      {
+        "en": "tapestry",
+        "cn": "挂毯"
+      },
+      {
+        "en": "century",
+        "cn": "世纪"
+      },
+      {
+        "en": "return",
+        "cn": "回归、重返"
+      }
+    ]
   },
   {
     "id": "seed-ket-pet",
@@ -773,7 +1046,9 @@ export const ITEMS = [
       "沪江英语",
       "剑桥英语官方"
     ],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "ca4ec1976b",
@@ -790,7 +1065,9 @@ export const ITEMS = [
     "featured": false,
     "heat": 35,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Britain's Prince Harry has been told he will not be allowed to stay at Buckingham Palace while he is in the U.K.",
+    "expressions": []
   },
   {
     "id": "seed-podcast-picks",
@@ -807,7 +1084,9 @@ export const ITEMS = [
     "featured": false,
     "heat": 35,
     "sources": [],
-    "lang": "zh"
+    "lang": "zh",
+    "lead_en": "",
+    "expressions": []
   },
   {
     "id": "5e39687699",
@@ -824,7 +1103,22 @@ export const ITEMS = [
     "featured": false,
     "heat": 34,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Protestors in Albania have clashed with police over the planned construction of a luxury resort on a nature reserve.",
+    "expressions": [
+      {
+        "en": "protest",
+        "cn": "抗议"
+      },
+      {
+        "en": "clash with",
+        "cn": "与…发生冲突"
+      },
+      {
+        "en": "resort",
+        "cn": "度假村"
+      }
+    ]
   },
   {
     "id": "83d898535c",
@@ -841,7 +1135,19 @@ export const ITEMS = [
     "featured": false,
     "heat": 34,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Football supporters attending the World Cup are struggling with the tipping culture.",
+    "expressions": [
+      {
+        "en": "tipping culture",
+        "cn": "小费文化"
+      },
+      {
+        "en": "struggle to",
+        "cn": "难以做到…",
+        "note": "struggle to adapt 难以适应"
+      }
+    ]
   },
   {
     "id": "b243323d85",
@@ -858,7 +1164,22 @@ export const ITEMS = [
     "featured": false,
     "heat": 34,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Researchers have reported that regular strength training may help us to live longer.",
+    "expressions": [
+      {
+        "en": "strength training",
+        "cn": "力量训练"
+      },
+      {
+        "en": "live longer",
+        "cn": "活得更久"
+      },
+      {
+        "en": "researcher",
+        "cn": "研究人员"
+      }
+    ]
   },
   {
     "id": "9b8b2b329d",
@@ -875,7 +1196,23 @@ export const ITEMS = [
     "featured": false,
     "heat": 34,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Football fans worldwide are not happy about the introduction of hydration breaks at the World Cup.",
+    "expressions": [
+      {
+        "en": "hydration break",
+        "cn": "补水暂停"
+      },
+      {
+        "en": "boo",
+        "cn": "喝倒彩、发出嘘声",
+        "note": "观众表达不满"
+      },
+      {
+        "en": "introduce",
+        "cn": "引入、推出（新规）"
+      }
+    ]
   },
   {
     "id": "8de544f2bb",
@@ -892,6 +1229,22 @@ export const ITEMS = [
     "featured": false,
     "heat": 34,
     "sources": [],
-    "lang": "en"
+    "lang": "en",
+    "lead_en": "Google has announced it will make its flight simulator available to the public.",
+    "expressions": [
+      {
+        "en": "flight simulator",
+        "cn": "飞行模拟器"
+      },
+      {
+        "en": "release",
+        "cn": "发布、推出"
+      },
+      {
+        "en": "make sth available to",
+        "cn": "向…开放",
+        "note": "available to the public 向公众开放"
+      }
+    ]
   }
 ];

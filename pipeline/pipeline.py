@@ -121,6 +121,8 @@ class Item:
     heat: int = 0                    # 热度分
     sources: list = field(default_factory=list)  # 多信源聚合:同一事件的其他信源名
     lang: str = "zh"
+    lead_en: str = ""                # 原文英文导语(不翻译,直接当学习材料展示)
+    expressions: list = field(default_factory=list)  # 重点表达 [{en, cn, note}]
     extra: dict = field(default_factory=dict)
 
 
@@ -167,6 +169,55 @@ def clean_summary(html_or_text: str, limit: int = 160) -> str:
 
 
 # ----------------------------------------------------------------------------
+# 2b. 中文兜底骨架 —— 没有 API key、editorial 也没覆盖时的呈现
+#     以前这种情况直接把英文 RSS 描述当 summary 塞给前端,推荐理由留空:
+#     最新抓来的内容 = 最差的呈现,而且每天都在增加。
+#     现在:summary 由信源模板生成(描述的是节目形态,恒真,不会说错),
+#     英文原文导语挪到 lead_en 单独展示 —— 对英语学习站来说这是材料不是噪声。
+# ----------------------------------------------------------------------------
+SOURCE_FALLBACK = {
+    "bne": {
+        "summary": "Breaking News English 当日分级新闻。同一篇配多档难度与慢速音频,"
+                   "生词表、填空、讨论题齐全,适合当天泛读一遍再精读一遍。",
+        "reason": "每天更新、难度可选,是最容易坚持下来的日更阅读材料 —— 先挑一档读完,别贪多。",
+    },
+    "bbc_6min": {
+        "summary": "BBC 6 Minute English 本期节目。两位主持人 6 分钟对话,配完整文本与词汇讲解,"
+                   "适合先盲听一遍再对着文本精听。",
+        "reason": "公认的听力入门神器:话题有趣、语速友好,精听和影子跟读都合适。",
+    },
+    "bbc_tews": {
+        "summary": "BBC The English We Speak 本期讲一个地道表达。3 分钟一集,"
+                   "把用法、语境和例句讲透,教材里通常学不到。",
+        "reason": "3 分钟攒一个地道说法,积少成多,口语和写作立刻不土。",
+    },
+    "bbc_work": {
+        "summary": "BBC English at Work 职场情景剧本集。在连续剧情里学办公室英语,"
+                   "带完整对话文本。",
+        "reason": "把职场英语拍成连续剧,追剧一样学表达,比背对话有意思得多。",
+    },
+}
+
+# Breaking News English 的 RSS 描述以 "Jul 20, 2026. " 开头,导语要把这段日期剥掉
+_LEAD_DATE = re.compile(r"^[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}\.\s*")
+
+
+def apply_fallback(it: Item, src: dict) -> None:
+    """把英文描述转存 lead_en,summary/reason 用信源模板兜底。"""
+    desc = it.summary
+    if desc:
+        it.lead_en = _LEAD_DATE.sub("", desc).strip()
+    fb = SOURCE_FALLBACK.get(src["id"])
+    if fb:
+        it.summary = fb["summary"]
+        it.reason = fb["reason"]
+    else:
+        # 未配模板的新信源:至少别把英文当中文摘要下发
+        it.summary = f"{src['name']} 最新内容。"
+        it.reason = ""
+
+
+# ----------------------------------------------------------------------------
 # 3. 抓取层
 # ----------------------------------------------------------------------------
 def fetch_html_source(src: dict, limit: int = 15) -> list[Item]:
@@ -195,6 +246,7 @@ def fetch_html_source(src: dict, limit: int = 15) -> list[Item]:
             topic=classify_topic(title, src.get("topic", "method")),
             lang=src["lang"],
         )
+        apply_fallback(it, src)
         if src.get("evergreen"):
             it.extra["evergreen"] = True
         items.append(it)
@@ -238,6 +290,7 @@ def fetch_rss_source(src: dict, limit: int = 15) -> list[Item]:
             published=pub, time=tm, summary=desc,
             topic=classify_topic(title, default_topic), lang=src["lang"],
         )
+        apply_fallback(it, src)
         if evergreen:
             it.extra["evergreen"] = True
         items.append(it)
@@ -270,9 +323,36 @@ AI_SYSTEM = (
     "2) 写一句 25~45 字的推荐理由 reason,口吻像懂行的学长直接说清『为什么值得你点开、能帮你解决什么』,可以有观点,别复述摘要;\n"
     f"3) 从 {TOPICS} 里选一个 topic(词汇=vocab 听力=listening 口语=speaking "
     "阅读/外刊=reading 考试资讯与备考=exam 学习方法/工具=method 其他教育动态=news);\n"
-    "4) featured: 只有当天真正值得看的重点才 true(每批最多 2~3 条)。\n"
-    "只输出 JSON 数组,元素为 {id, summary, reason, topic, featured},不要任何其他文字。"
+    "4) featured: 只有当天真正值得看的重点才 true(每批最多 2~3 条);\n"
+    "5) expressions: 从该条内容里挑 3~5 个真正值得带走的表达,每个 {en, cn, note}——\n"
+    "   en=英文词/短语(照抄原文形态,别自己造),cn=简洁中文释义,\n"
+    "   note=一句话说清用法或搭配(可省)。只挑学习者用得上的:\n"
+    "   地道短语、高频搭配、话题核心词;不要 the/and 这种功能词,不要生僻到用不上的。\n"
+    "   **只从 title/desc 里确实出现的内容挑,拿不准就少给几个,绝对不要编。**\n"
+    "只输出 JSON 数组,元素为 {id, summary, reason, topic, featured, expressions},"
+    "不要任何其他文字。"
 )
+
+
+def normalize_expressions(raw, limit: int = 5) -> list:
+    """清洗重点表达:丢掉缺 en/cn 的、去重、截断。AI 和 editorial 共用。"""
+    out, seen = [], set()
+    for e in (raw or []):
+        if not isinstance(e, dict):
+            continue
+        en = (e.get("en") or "").strip()
+        cn = (e.get("cn") or "").strip()
+        if not en or not cn or en.lower() in seen:
+            continue
+        seen.add(en.lower())
+        item = {"en": en[:60], "cn": cn[:40]}
+        note = (e.get("note") or "").strip()
+        if note:
+            item["note"] = note[:60]
+        out.append(item)
+        if len(out) >= limit:
+            break
+    return out
 
 
 def ai_enrich(items: list[Item], batch: int = 10) -> None:
@@ -293,8 +373,9 @@ def ai_enrich(items: list[Item], batch: int = 10) -> None:
     print("== AI 摘要/打标 ==")
     for i in range(0, len(items), batch):
         chunk = items[i:i + batch]
+        # desc 优先给英文原文导语 —— summary 此时已是中文兜底模板,喂回去没信息量
         payload = [{"id": it.id, "title": it.title, "source": it.source,
-                    "desc": it.summary} for it in chunk]
+                    "desc": it.lead_en or it.summary} for it in chunk]
         msg = client.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=1500,
@@ -315,6 +396,7 @@ def ai_enrich(items: list[Item], batch: int = 10) -> None:
                 it.reason = r.get("reason", "")[:90]
                 it.topic = r.get("topic") if r.get("topic") in TOPICS else "method"
                 it.featured = bool(r.get("featured"))
+                it.expressions = normalize_expressions(r.get("expressions"))
         print(f"  批次 {i//batch + 1}: {len(chunk)} 条完成")
 
 
@@ -378,9 +460,11 @@ def apply_editorial(items: list[Item]) -> None:
         o = overrides.get(it.id)
         if not o:
             continue
-        for k in ("summary", "reason", "topic", "featured", "sources"):
+        for k in ("summary", "reason", "topic", "featured", "sources", "lead_en"):
             if k in o:
                 setattr(it, k, o[k])
+        if "expressions" in o:
+            it.expressions = normalize_expressions(o["expressions"])
         n += 1
     print(f"编辑覆盖 {n} 条")
 
