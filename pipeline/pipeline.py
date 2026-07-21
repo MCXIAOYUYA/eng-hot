@@ -65,6 +65,7 @@ SOURCES = [
         "lang": "en",
         "topic": "listening",
         "evergreen": True,
+        "duration": "6 分钟",
         "strip": "BBC Learning English - 6 Minute English / ",
         "limit": 7,
     },
@@ -78,6 +79,7 @@ SOURCES = [
         "lang": "en",
         "topic": "vocab",
         "evergreen": True,
+        "duration": "3 分钟",
         "strip": "BBC Learning English - The English We Speak / ",
         "limit": 6,
     },
@@ -121,6 +123,7 @@ class Item:
     heat: int = 0                    # 热度分
     sources: list = field(default_factory=list)  # 多信源聚合:同一事件的其他信源名
     lang: str = "zh"
+    duration: str = ""               # 单集时长(只在它是节目固定形态时才填,别猜)
     lead_en: str = ""                # 原文英文导语(不翻译,直接当学习材料展示)
     expressions: list = field(default_factory=list)  # 重点表达 [{en, cn, note}]
     extra: dict = field(default_factory=dict)
@@ -246,6 +249,7 @@ def fetch_html_source(src: dict, limit: int = 15) -> list[Item]:
             topic=classify_topic(title, src.get("topic", "method")),
             lang=src["lang"],
         )
+        it.duration = src.get("duration", "")
         apply_fallback(it, src)
         if src.get("evergreen"):
             it.extra["evergreen"] = True
@@ -290,6 +294,7 @@ def fetch_rss_source(src: dict, limit: int = 15) -> list[Item]:
             published=pub, time=tm, summary=desc,
             topic=classify_topic(title, default_topic), lang=src["lang"],
         )
+        it.duration = src.get("duration", "")
         apply_fallback(it, src)
         if evergreen:
             it.extra["evergreen"] = True
@@ -401,26 +406,35 @@ def ai_enrich(items: list[Item], batch: int = 10) -> None:
 
 
 # ----------------------------------------------------------------------------
-# 5. 热度算法
+# 5. 热度算法 —— 只算真时效内容(新闻 + 考试节点)
 #    heat = 信源权重(0~40) + 时效衰减(0~40) + 精选加成(0~12) + 关键词加成(0~8)
 #    时效: exp(-days/3) —— 3 天半衰,一周后基本归零
 #    考试节点类信息(查分/报名/考位)天然带强时效,靠关键词加成再抬一档
+#
+#    常青内容(BBC 节目/方法/词根)heat 恒为 0,不参与热度排序,前端也不显示热度。
+#    以前给它们按固定 0.55 新鲜度编一个分:6 Minute English 2019 年那集和今天这集
+#    学习价值完全一样,"热度"对它们根本不成立 —— 半数条目的分是常数,
+#    整条流的分辨率被稀释到只剩三档。常青内容归素材库,按信源和主题浏览。
 # ----------------------------------------------------------------------------
 HOT_KEYWORDS = ["四六级", "考研", "雅思", "托福", "真题", "成绩", "查分", "报名",
                 "考位", "大纲", "出分", "cet", "ielts", "toefl", "高考"]
 
 
+def is_library(it: Item) -> bool:
+    """常青素材(不随时间贬值)→ 素材库;其余是真时效内容 → 今日流。"""
+    return bool(it.extra.get("evergreen"))
+
+
 def heat_score(it: Item) -> int:
+    if is_library(it):
+        return 0
     src = it.source_weight * 40
-    if it.extra.get("evergreen"):
-        recency = 40 * 0.55  # 常青内容(方法/工具/词根)豁免衰减,按固定中等新鲜度计
-    else:
-        ref = it.published or it.captured
-        try:
-            days = (datetime.now(timezone.utc) - datetime.strptime(ref, "%Y-%m-%d").replace(tzinfo=timezone.utc)).days
-        except ValueError:
-            days = 7
-        recency = 40 * math.exp(-max(days, 0) / 3)
+    ref = it.published or it.captured
+    try:
+        days = (datetime.now(timezone.utc) - datetime.strptime(ref, "%Y-%m-%d").replace(tzinfo=timezone.utc)).days
+    except ValueError:
+        days = 7
+    recency = 40 * math.exp(-max(days, 0) / 3)
     feat = 12 if it.featured else 0
     kw = 8 if any(k in it.title.lower() for k in HOT_KEYWORDS) else 0
     return min(99, round(src + recency + feat + kw))
@@ -473,7 +487,8 @@ def apply_editorial(items: list[Item]) -> None:
 # 7. 输出
 # ----------------------------------------------------------------------------
 def emit(items: list[Item]) -> None:
-    items.sort(key=lambda x: x.heat, reverse=True)
+    # 时效流按热度排;素材库没有热度,按信源权重排(同信源内保持 RSS 原序 = 最新在前)
+    items.sort(key=lambda x: (is_library(x), -x.heat if not is_library(x) else -x.source_weight))
     data = []
     for it in items:
         d = asdict(it)

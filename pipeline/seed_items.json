@@ -17,14 +17,50 @@
     "extra": {
       "evergreen": true,
       "phases": [
-        { "cn": "开嗓跟读", "en": "Warm-up Read-aloud", "dur": "3 min", "sec": 180,
-          "items": ["选一段 60~80 词的短文,大声朗读两遍", "第二遍注意连读与重音", "嘴巴打开,语速比舒适区快 10%"] },
-        { "cn": "精听填空", "en": "Intensive Listening", "dur": "4 min", "sec": 240,
-          "items": ["同一段材料,遮住文本听 2 遍", "听写没听清的词,再对照原文", "标出吞音 / 弱读的位置"] },
-        { "cn": "影子跟读", "en": "Shadowing", "dur": "5 min", "sec": 300,
-          "items": ["落后原声 1~2 个词同步跟读", "不求每个词都对,优先模仿语调起伏", "最后一遍尝试脱稿跟读"] },
-        { "cn": "复述输出", "en": "Retell & Output", "dur": "3 min", "sec": 180,
-          "items": ["合上材料,用自己的话复述大意", "录音 60 秒,回听找卡壳点", "把卡壳的表达记进生词本"] }
+        {
+          "cn": "开嗓跟读",
+          "en": "Warm-up Read-aloud",
+          "dur": "3 min",
+          "sec": 180,
+          "items": [
+            "选一段 60~80 词的短文,大声朗读两遍",
+            "第二遍注意连读与重音",
+            "嘴巴打开,语速比舒适区快 10%"
+          ]
+        },
+        {
+          "cn": "精听填空",
+          "en": "Intensive Listening",
+          "dur": "4 min",
+          "sec": 240,
+          "items": [
+            "同一段材料,遮住文本听 2 遍",
+            "听写没听清的词,再对照原文",
+            "标出吞音 / 弱读的位置"
+          ]
+        },
+        {
+          "cn": "影子跟读",
+          "en": "Shadowing",
+          "dur": "5 min",
+          "sec": 300,
+          "items": [
+            "落后原声 1~2 个词同步跟读",
+            "不求每个词都对,优先模仿语调起伏",
+            "最后一遍尝试脱稿跟读"
+          ]
+        },
+        {
+          "cn": "复述输出",
+          "en": "Retell & Output",
+          "dur": "3 min",
+          "sec": 180,
+          "items": [
+            "合上材料,用自己的话复述大意",
+            "录音 60 秒,回听找卡壳点",
+            "把卡壳的表达记进生词本"
+          ]
+        }
       ]
     }
   },
@@ -46,14 +82,50 @@
     "extra": {
       "evergreen": true,
       "phases": [
-        { "cn": "选材", "en": "Pick Material", "dur": "1 min", "sec": 60,
-          "items": ["60~90 秒的音频,语速略低于母语者", "有原文文本可对照", "话题自己感兴趣"] },
-        { "cn": "首听抓大意", "en": "First Listen", "dur": "2 min", "sec": 120,
-          "items": ["不看文本完整听一遍", "用一句话概括主旨", "标记完全没听懂的句子"] },
-        { "cn": "同步跟读", "en": "Shadow", "dur": "4 min", "sec": 240,
-          "items": ["落后原声 1~2 个词开口跟", "重点模仿重音和语调,不纠结单词", "同一段至少跟 3 遍"] },
-        { "cn": "回听纠音", "en": "Review", "dur": "3 min", "sec": 180,
-          "items": ["录下自己最后一遍跟读", "与原声对比,找 3 个差距最大的音", "记录下次要攻克的发音点"] }
+        {
+          "cn": "选材",
+          "en": "Pick Material",
+          "dur": "1 min",
+          "sec": 60,
+          "items": [
+            "60~90 秒的音频,语速略低于母语者",
+            "有原文文本可对照",
+            "话题自己感兴趣"
+          ]
+        },
+        {
+          "cn": "首听抓大意",
+          "en": "First Listen",
+          "dur": "2 min",
+          "sec": 120,
+          "items": [
+            "不看文本完整听一遍",
+            "用一句话概括主旨",
+            "标记完全没听懂的句子"
+          ]
+        },
+        {
+          "cn": "同步跟读",
+          "en": "Shadow",
+          "dur": "4 min",
+          "sec": 240,
+          "items": [
+            "落后原声 1~2 个词开口跟",
+            "重点模仿重音和语调,不纠结单词",
+            "同一段至少跟 3 遍"
+          ]
+        },
+        {
+          "cn": "回听纠音",
+          "en": "Review",
+          "dur": "3 min",
+          "sec": 180,
+          "items": [
+            "录下自己最后一遍跟读",
+            "与原声对比,找 3 个差距最大的音",
+            "记录下次要攻克的发音点"
+          ]
+        }
       ]
     }
   },
@@ -71,7 +143,12 @@
     "topic": "exam",
     "featured": true,
     "lang": "zh",
-    "sources": ["中国教育考试网", "四六级官方微博", "沪江英语", "中国教育在线"],
+    "sources": [
+      "中国教育考试网",
+      "四六级官方微博",
+      "沪江英语",
+      "中国教育在线"
+    ],
     "extra": {}
   },
   {
@@ -88,8 +165,14 @@
     "topic": "speaking",
     "featured": true,
     "lang": "zh",
-    "sources": ["站内整理", "少数派", "小红书话题"],
-    "extra": {}
+    "sources": [
+      "站内整理",
+      "少数派",
+      "小红书话题"
+    ],
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-bbc-6min",
@@ -106,7 +189,9 @@
     "featured": false,
     "lang": "en",
     "sources": [],
-    "extra": {}
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-ielts-seats",
@@ -122,7 +207,10 @@
     "topic": "exam",
     "featured": false,
     "lang": "zh",
-    "sources": ["中国教育在线", "雅思官方"],
+    "sources": [
+      "中国教育在线",
+      "雅思官方"
+    ],
     "extra": {}
   },
   {
@@ -139,8 +227,13 @@
     "topic": "exam",
     "featured": true,
     "lang": "zh",
-    "sources": ["沪江英语", "考研帮"],
-    "extra": {}
+    "sources": [
+      "沪江英语",
+      "考研帮"
+    ],
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-chinadaily-citywalk",
@@ -157,7 +250,9 @@
     "featured": false,
     "lang": "zh",
     "sources": [],
-    "extra": {}
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-economist-ai-jobs",
@@ -173,8 +268,13 @@
     "topic": "reading",
     "featured": false,
     "lang": "zh",
-    "sources": ["外刊精读", "经济学人商论"],
-    "extra": {}
+    "sources": [
+      "外刊精读",
+      "经济学人商论"
+    ],
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-voa-slow",
@@ -191,7 +291,9 @@
     "featured": false,
     "lang": "zh",
     "sources": [],
-    "extra": { "evergreen": true }
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-root-spect",
@@ -208,7 +310,9 @@
     "featured": false,
     "lang": "zh",
     "sources": [],
-    "extra": { "evergreen": true }
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-writing-template",
@@ -224,8 +328,14 @@
     "topic": "method",
     "featured": true,
     "lang": "zh",
-    "sources": ["沪江英语", "考研帮", "知乎话题"],
-    "extra": {}
+    "sources": [
+      "沪江英语",
+      "考研帮",
+      "知乎话题"
+    ],
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-toefl-autumn",
@@ -241,7 +351,10 @@
     "topic": "exam",
     "featured": false,
     "lang": "zh",
-    "sources": ["托福官方", "小红书话题"],
+    "sources": [
+      "托福官方",
+      "小红书话题"
+    ],
     "extra": {}
   },
   {
@@ -259,7 +372,9 @@
     "featured": false,
     "lang": "zh",
     "sources": [],
-    "extra": { "evergreen": true }
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-speaking-alone",
@@ -276,7 +391,9 @@
     "featured": false,
     "lang": "zh",
     "sources": [],
-    "extra": { "evergreen": true }
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-gaokao-listening",
@@ -292,7 +409,11 @@
     "topic": "news",
     "featured": false,
     "lang": "zh",
-    "sources": ["中国教育在线", "各省教育考试院", "澎湃新闻"],
+    "sources": [
+      "中国教育在线",
+      "各省教育考试院",
+      "澎湃新闻"
+    ],
     "extra": {}
   },
   {
@@ -310,7 +431,9 @@
     "featured": false,
     "lang": "zh",
     "sources": [],
-    "extra": {}
+    "extra": {
+      "evergreen": true
+    }
   },
   {
     "id": "seed-ket-pet",
@@ -326,7 +449,10 @@
     "topic": "exam",
     "featured": false,
     "lang": "zh",
-    "sources": ["沪江英语", "剑桥英语官方"],
+    "sources": [
+      "沪江英语",
+      "剑桥英语官方"
+    ],
     "extra": {}
   }
 ]

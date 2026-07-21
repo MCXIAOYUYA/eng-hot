@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import {
   Flame, Star, ExternalLink, Timer, Play, RotateCcw, ChevronRight, Check,
-  Sparkles, LayoutList, CalendarDays, Hash, BookOpen, TrendingUp, ArrowUpDown,
+  Sparkles, CalendarDays, Hash, BookOpen, TrendingUp, ArrowUpDown,
   Quote, Layers, Sun, Moon, MonitorSmartphone, ArrowRight,
 } from "lucide-react";
 
@@ -20,6 +20,13 @@ const TOPICS = [
 
 // 跟练流程(带 phases → 详情可跟练)
 import { ITEMS } from "./data.js";
+
+/* 拆主轴:热度只对真时效内容成立。
+   LIVE  —— 新闻 + 考试节点,今天不看就贬值,按热度排
+   LIB   —— BBC 节目 / 方法 / 词根,2019 年那集和今天这集价值一样,
+            没有热度可言,按主题浏览。混在一条热度流里两边都被拖累。 */
+const LIVE = ITEMS.filter((i) => !i.evergreen);
+const LIB = ITEMS.filter((i) => i.evergreen);
 
 
 /* ============================================================
@@ -134,20 +141,49 @@ function ThemeStyle() {
     .readbtn:hover{background:rgba(62,207,160,.1)}
     .openbtn{display:inline-flex;align-items:center;gap:5px;font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.08em;font-weight:700;font-size:11.5px;color:#0F1626;background:var(--gold);border-radius:6px;padding:6px 12px}
 
+    /* 今日 5 分钟 —— 固定剂量,首页唯一的行动号召 */
+    .dose{background:linear-gradient(120deg,var(--panel2),var(--panel));border:1px solid rgba(255,177,0,.3);border-radius:14px;padding:20px 22px;margin-bottom:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .dose::after{content:"";position:absolute;right:-70px;bottom:-70px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,177,0,.14),transparent 70%);pointer-events:none}
+    .dose .dh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+    .dose .dt{font-family:var(--cn);font-weight:900;font-size:19px;display:flex;align-items:center;gap:8px}
+    .dose .dt .ic{color:var(--gold)}
+    .dose .prog{font-family:"Space Grotesk";font-size:12.5px;color:var(--muted)}
+    .streak{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-family:"Space Grotesk";font-weight:700;font-size:12.5px;color:var(--gold);background:rgba(255,177,0,.12);border:1px solid rgba(255,177,0,.3);padding:4px 11px;border-radius:99px}
+    .streak.zero{color:var(--muted);background:rgba(131,145,166,.12);border-color:var(--line)}
+    .dose .sub{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+    .dose .alldone{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--mint);background:rgba(62,207,160,.1);border:1px solid rgba(62,207,160,.3);border-radius:8px;padding:10px 14px;margin-bottom:14px}
+
+    .step{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:12px 14px;margin-bottom:8px;position:relative;z-index:1;transition:.14s}
+    .step:hover{border-color:rgba(255,177,0,.35)}
+    .step .no{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk";font-weight:700;font-size:11.5px;background:rgba(255,177,0,.16);color:var(--gold);margin-top:1px}
+    .step.done .no{background:var(--mint);color:#0F1626}
+    .step .body{flex:1;min-width:0}
+    .step .k{font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.14em;font-size:9.5px;color:var(--muted);margin-bottom:3px}
+    .step .v{font-size:14px;font-weight:700;line-height:1.4;cursor:pointer}
+    .step .v:hover{color:var(--gold)}
+    .step.done .v{color:var(--muted);text-decoration:line-through}
+    .step .mini{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+    .step .mini span{font-size:11.5px;color:var(--sub);background:rgba(131,145,166,.12);border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+    .step .mini b{color:var(--paper);font-weight:700}
+    .stepbtn{flex:none;align-self:center;background:none;border:1px solid var(--line);color:var(--muted);cursor:pointer;border-radius:6px;width:28px;height:28px;display:grid;place-items:center;transition:.14s}
+    .stepbtn:hover{border-color:var(--mint);color:var(--mint)}
+    .step.done .stepbtn{background:var(--mint);border-color:var(--mint);color:#0F1626}
+
+    /* 素材库 —— 常青内容,没有热度可言,按主题浏览 */
+    .libhd{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;margin:26px 0 14px}
+    .libhd:first-child{margin-top:0}
+    .libhd .lt{font-family:var(--cn);font-weight:900;font-size:17px}
+    .libhd .ln{margin-left:auto;font-family:"Space Grotesk";font-size:12px;color:var(--muted)}
+    .card.lib{border-left-color:rgba(131,145,166,.35)}
+    .card.lib:hover{border-left-color:var(--mint)}
+    .dur{display:inline-flex;align-items:center;gap:4px;font-family:"Space Grotesk";font-weight:600;font-size:11.5px;color:var(--mint)}
+
     /* 日报分组 */
     .daygrp{margin-bottom:26px}
     .dayhd{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:14px}
     .dayhd .d{font-family:"Space Grotesk";font-weight:700;font-size:20px}
     .dayhd .w{font-family:"Space Grotesk";text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--muted)}
     .dayhd .n{margin-left:auto;font-size:12px;color:var(--muted)}
-
-    /* 主题网格 */
-    .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-    .tcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px;cursor:pointer;transition:.16s;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-    .tcard:hover{transform:translateY(-3px);border-color:rgba(255,177,0,.4)}
-    .tcard .tt{font-family:var(--cn);font-weight:900;font-size:19px;margin-bottom:4px}
-    .tcard .tn{font-family:"Space Grotesk";font-size:13px;color:var(--muted)}
-    .tcard .glow{position:absolute;right:-20px;top:-20px;width:70px;height:70px;border-radius:50%;filter:blur(24px);opacity:.5}
 
     .empty{border:1px dashed var(--line);border-radius:10px;padding:44px 24px;text-align:center;color:var(--muted);font-size:13.5px}
     .empty b{color:var(--paper);display:block;font-size:15px;margin-bottom:6px;font-weight:700}
@@ -285,13 +321,18 @@ function Hero({ item, dateLabel, onOpen }) {
 function FeedCard({ item, starred, onStar, onOpen }) {
   const tp = topicOf(item.topic);
   const cluster = (item.sources?.length || 0);
+  // 素材库条目不显示热度和抓取日期 —— 那两个数字对常青内容没有意义,
+  // 换成时长(它是节目的固定形态,是真信息)
+  const lib = !!item.evergreen;
   return (
-    <article className={"card" + (item.featured ? " feat" : "")} onClick={() => onOpen(item)}>
+    <article className={"card" + (item.featured ? " feat" : "") + (lib ? " lib" : "")} onClick={() => onOpen(item)}>
       <div className="row1">
-        <HeatBar heat={item.heat} />
+        {lib
+          ? (item.duration && <span className="dur"><Timer size={12} /> {item.duration}</span>)
+          : <HeatBar heat={item.heat} />}
         <span className="ttag" style={{ color: tp.color, borderColor: tp.color + "66" }}>{tp.label}</span>
         {item.featured && <span className="feat-badge"><Sparkles size={11} /> 精选</span>}
-        <span className="date mono">{when(item)}</span>
+        {!lib && <span className="date mono">{when(item)}</span>}
       </div>
       <h3>{item.title}</h3>
       <p>{item.summary}</p>
@@ -402,21 +443,126 @@ function Drawer({ item, onClose }) {
 }
 
 /* ============================================================
+   今日 5 分钟 —— 固定剂量 + 连续打卡
+
+   第一性原理:英语学习材料是过剩的免费品,稀缺的是注意力、决策力和坚持。
+   所以首页不该再问「今天看什么」,而该直接给一份今天做完就算数的定量。
+   收藏是囤积机制(存了 ≠ 学了),打卡才是学习机制 —— 复利来自重复,不是发现。
+   ============================================================ */
+const localDay = (d = new Date()) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+const prevDay = (day) => {
+  const d = new Date(day + "T12:00:00");   // 正午构造,绕开夏令时与时区把日期挪走
+  d.setDate(d.getDate() - 1);
+  return localDay(d);
+};
+
+const STEPS = ["news", "expr", "shadow"];
+
+/* 打卡状态存在 localStorage:{ day, steps, streak, last }
+   day  = 当前这份剂量属于哪天(跨天自动重置勾选)
+   last = 最后一次「三步做完」的日期,用来判断连续是否断掉
+   注意用本地日期,不是数据里的 UTC captured —— 打卡记的是"用户哪天学的" */
+function useDose() {
+  const today = localDay();
+  const [st, setSt] = useState(() => {
+    let s = { day: today, steps: {}, streak: 0, last: "" };
+    try {
+      const raw = JSON.parse(localStorage.getItem("enghot-dose") || "null");
+      if (raw) s = { ...s, ...raw };
+    } catch { /* 存坏了就当新用户,不要因为一条脏数据白屏 */ }
+    if (s.day !== today) s = { ...s, day: today, steps: {} };   // 换天,重新开始
+    // 昨天没做完就断签:last 既不是今天也不是昨天,连续归零
+    if (s.last !== today && s.last !== prevDay(today)) s.streak = 0;
+    return s;
+  });
+
+  useEffect(() => { localStorage.setItem("enghot-dose", JSON.stringify(st)); }, [st]);
+
+  const toggle = (k) => setSt((s) => {
+    const steps = { ...s.steps, [k]: !s.steps[k] };
+    const done = STEPS.every((x) => steps[x]);
+    // 三步齐了、且今天还没记过 → 连上一天则 +1,否则从 1 重新开始
+    if (done && s.last !== s.day) {
+      return { ...s, steps, streak: s.last === prevDay(s.day) ? s.streak + 1 : 1, last: s.day };
+    }
+    return { ...s, steps };
+  });
+
+  const doneCount = STEPS.filter((k) => st.steps[k]).length;
+  return { steps: st.steps, streak: st.streak, doneCount, allDone: doneCount === STEPS.length, toggle };
+}
+
+function DailyDose({ news, expressions, shadow, onOpen }) {
+  const { steps, streak, doneCount, allDone, toggle } = useDose();
+  const Row = ({ k, no, label, children }) => (
+    <div className={"step" + (steps[k] ? " done" : "")}>
+      <span className="no">{steps[k] ? <Check size={12} /> : no}</span>
+      <div className="body">
+        <div className="k">{label}</div>
+        {children}
+      </div>
+      <button className="stepbtn" title={steps[k] ? "取消" : "标记完成"} onClick={() => toggle(k)}>
+        <Check size={15} />
+      </button>
+    </div>
+  );
+  return (
+    <div className="dose">
+      <div className="dh">
+        <div className="dt"><Timer className="ic" size={19} /> 今日 5 分钟</div>
+        <span className={"streak" + (streak ? "" : " zero")}>
+          <Flame size={12} /> {streak ? `连续 ${streak} 天` : "还没开始"}
+        </span>
+      </div>
+      <div className="sub">
+        三件事做完就算今天练过了 —— 别贪多,能天天做完比一次做很多有用。
+        <span className="prog"> · {doneCount}/3</span>
+      </div>
+
+      {allDone && (
+        <div className="alldone"><Check size={15} /> 今天练完了。明天这个时候再来，连续就变成 {streak + 1} 天。</div>
+      )}
+
+      {news && (
+        <Row k="news" no="1" label="读一条新闻">
+          <div className="v" onClick={() => onOpen(news)}>{news.title}</div>
+        </Row>
+      )}
+      {expressions.length > 0 && (
+        <Row k="expr" no="2" label={`记 ${expressions.length} 个表达`}>
+          <div className="mini">
+            {expressions.map((e, i) => <span key={i}><b>{e.en}</b> {e.cn}</span>)}
+          </div>
+        </Row>
+      )}
+      {shadow && (
+        <Row k="shadow" no="3" label="跟读一次">
+          <div className="v" onClick={() => onOpen(shadow)}>{shadow.title}</div>
+        </Row>
+      )}
+    </div>
+  );
+}
+
+/* ============================================================
    视图
    ============================================================ */
+/* 从五个视图收到四个:原来的「精选 / 全部动态 / 日报 / 主题 / 收藏」里,
+   精选和全部动态在拆开时效流与素材库之后就重复了。用户的真实问题是
+   「今天学什么」,不是「让我挑一个视图」—— 每多一个入口就多一次决策消耗。 */
 const NAV = [
-  { id: "featured", label: "精选", icon: Sparkles, grp: "内容" },
-  { id: "all", label: "全部动态", icon: LayoutList, grp: "内容" },
-  { id: "daily", label: "日报", icon: CalendarDays, grp: "内容" },
-  { id: "topics", label: "主题", icon: Hash, grp: "内容" },
-  { id: "starred", label: "收藏", icon: Star, grp: "内容" },
+  { id: "today", label: "今日", icon: Flame },
+  { id: "daily", label: "往期日报", icon: CalendarDays },
+  { id: "library", label: "素材库", icon: BookOpen },
+  { id: "starred", label: "收藏", icon: Star },
 ];
 
 const VIEW_META = {
-  featured: { icon: Sparkles, h: "精选", d: "AI 帮你筛掉噪声,每天只留真正值得看的几条" },
-  all: { icon: LayoutList, h: "全部动态", d: "所有接入信源的完整信息流" },
-  daily: { icon: CalendarDays, h: "英语日报", d: "按抓取日期分组,当天热点一目了然" },
-  topics: { icon: Hash, h: "主题", d: "词汇 · 听力 · 口语 · 阅读 · 考试,按类型浏览" },
+  today: { icon: Flame, h: "今日", d: "会过期的内容才配叫热点:当天新闻 + 考试节点" },
+  daily: { icon: CalendarDays, h: "往期日报", d: "时效内容按日分组,补上错过的那几天" },
+  library: { icon: BookOpen, h: "素材库", d: "不会过期的材料:BBC 节目、方法、词根,按主题挑" },
   starred: { icon: Star, h: "我的收藏", d: "标星的条目会留在这里" },
 };
 
@@ -441,7 +587,7 @@ function useTheme() {
 }
 
 export default function EnglishHot() {
-  const [view, setView] = useState("featured");
+  const [view, setView] = useState("today");
   const [topic, setTopic] = useState(null);
   const [sort, setSort] = useState("heat");
   const [starred, setStarred] = useState({});
@@ -451,42 +597,56 @@ export default function EnglishHot() {
   const toggleStar = (id) => setStarred((s) => ({ ...s, [id]: !s[id] }));
   const starCount = Object.values(starred).filter(Boolean).length;
 
-  const sorted = useMemo(() => {
-    const arr = [...ITEMS];
-    arr.sort((a, b) => (sort === "heat" ? b.heat - a.heat : b.captured.localeCompare(a.captured) || b.heat - a.heat));
-    return arr;
-  }, [sort]);
-
-  const list = useMemo(() => {
-    let arr = sorted;
-    if (view === "featured") arr = arr.filter((i) => i.featured);
-    if (view === "starred") arr = arr.filter((i) => starred[i.id]);
-    if (topic) arr = arr.filter((i) => i.topic === topic);
-    return arr;
-  }, [sorted, view, topic, starred]);
-
-  const meta = VIEW_META[view];
-  const showChips = view === "all" || view === "featured" || view === "starred";
-
   // 今日热点:最新那天里热度最高的一条。
   // 注意条目和日期必须取自同一条 —— 以前 hero 取全站最热、日期取全站最新,
   // 两者不是同一条时会出现「7月20日」配一条 7月18 的内容。
-  const [hero, heroDate] = useMemo(() => {
-    if (!ITEMS.length) return [null, ""];
-    const latest = ITEMS.reduce((m, i) => (i.captured > m ? i.captured : m), ITEMS[0].captured);
-    const top = ITEMS.filter((i) => i.captured === latest)
-      .reduce((a, b) => (b.heat > a.heat ? b : a));
-    const d = new Date(top.captured);
+  const [hero, heroDate, todayItems] = useMemo(() => {
+    if (!LIVE.length) return [null, "", []];
+    const latest = LIVE.reduce((m, i) => (i.captured > m ? i.captured : m), LIVE[0].captured);
+    const of = LIVE.filter((i) => i.captured === latest).sort((a, b) => b.heat - a.heat);
+    const d = new Date(latest);
     const wd = ["日", "一", "二", "三", "四", "五", "六"][d.getDay()];
-    return [top, `${d.getMonth() + 1}月${d.getDate()}日 · 周${wd}`];
+    return [of[0], `${d.getMonth() + 1}月${d.getDate()}日 · 周${wd}`, of];
   }, []);
-  const showHero = hero && (view === "featured" || view === "all") && !topic;
 
+  // 今日 5 分钟的三份材料。都从真实数据里取,取不到就少一步,不编。
+  const dose = useMemo(() => {
+    const pool = todayItems.length ? todayItems : LIVE;
+    const expressions = [];
+    for (const it of [...pool, ...LIB]) {
+      for (const e of it.expressions || []) {
+        if (expressions.length < 5 && !expressions.some((x) => x.en === e.en)) expressions.push(e);
+      }
+      if (expressions.length >= 5) break;
+    }
+    return { news: hero, expressions, shadow: LIB.find((i) => i.phases) || null };
+  }, [hero, todayItems]);
+
+  const sortLive = (arr) => [...arr].sort((a, b) =>
+    sort === "heat" ? b.heat - a.heat : b.captured.localeCompare(a.captured) || b.heat - a.heat);
+
+  const list = useMemo(() => {
+    let arr = view === "starred" ? ITEMS.filter((i) => starred[i.id]) : sortLive(todayItems);
+    if (topic) arr = arr.filter((i) => i.topic === topic);
+    return arr;
+  }, [view, topic, starred, sort, todayItems]);
+
+  const meta = VIEW_META[view];
+  const showChips = view === "today" || view === "starred";
+  const showHero = hero && view === "today" && !topic;
+
+  // 往期日报只含时效内容 —— 常青素材没有"哪天的"这回事
   const dayGroups = useMemo(() => {
     const g = {};
-    sorted.forEach((i) => (g[i.captured] = g[i.captured] || []).push(i));
+    sortLive(LIVE).forEach((i) => (g[i.captured] = g[i.captured] || []).push(i));
     return Object.entries(g).sort((a, b) => b[0].localeCompare(a[0]));
-  }, [sorted]);
+  }, [sort]);
+
+  // 素材库按主题分组,组内保持流水线给的信源权重序
+  const libGroups = useMemo(() => {
+    const arr = topic ? LIB.filter((i) => i.topic === topic) : LIB;
+    return TOPICS.map((t) => [t, arr.filter((i) => i.topic === t.id)]).filter(([, v]) => v.length);
+  }, [topic]);
 
   return (
     <div className={"ehot" + (light ? " light" : "")}>
@@ -498,7 +658,9 @@ export default function EnglishHot() {
         <div className="navgrp">内容</div>
         {NAV.map((n) => {
           const Icon = n.icon;
-          const cnt = n.id === "starred" ? starCount : n.id === "featured" ? ITEMS.filter((i) => i.featured).length : n.id === "all" ? ITEMS.length : null;
+          const cnt = n.id === "starred" ? starCount
+            : n.id === "today" ? todayItems.length
+            : n.id === "library" ? LIB.length : null;
           return (
             <button key={n.id} className={"navitem" + (view === n.id ? " on" : "")} onClick={() => { setView(n.id); setTopic(null); }}>
               <Icon size={16} /> {n.label}
@@ -531,7 +693,8 @@ export default function EnglishHot() {
             <h1><meta.icon className="ic" size={24} /> {meta.h}</h1>
             <div className="desc">{meta.d}</div>
           </div>
-          {view !== "topics" && (
+          {/* 排序只在有热度的视图里给 —— 素材库没有热度可排 */}
+          {(view === "today" || view === "daily") && (
             <button className="sortbtn" onClick={() => setSort((s) => (s === "heat" ? "new" : "heat"))}>
               <ArrowUpDown size={13} /> {sort === "heat" ? "按热度" : "按时间"}
             </button>
@@ -539,9 +702,12 @@ export default function EnglishHot() {
         </div>
 
         <div className="feed">
+          {view === "today" && !topic && (
+            <DailyDose news={dose.news} expressions={dose.expressions} shadow={dose.shadow} onOpen={setOpen} />
+          )}
           {showHero && <Hero item={hero} dateLabel={heroDate} onOpen={setOpen} />}
 
-          {showChips && (
+          {(showChips || view === "library") && (
             <div className="chips">
               <span className={"chip" + (topic === null ? " on" : "")} style={topic === null ? { background: "var(--fill)", color: "var(--fill-fg)", borderColor: "var(--fill)" } : {}} onClick={() => setTopic(null)}>全部</span>
               {TOPICS.map((t) => (
@@ -550,19 +716,18 @@ export default function EnglishHot() {
             </div>
           )}
 
-          {view === "topics" ? (
-            <div className="tgrid">
-              {TOPICS.map((t) => {
-                const n = ITEMS.filter((i) => i.topic === t.id).length;
-                return (
-                  <div key={t.id} className="tcard" onClick={() => { setView("all"); setTopic(t.id); }}>
-                    <div className="glow" style={{ background: t.color }} />
-                    <div className="tt">{t.label}</div>
-                    <div className="tn mono">{n > 0 ? `${n} 条内容` : "信源接入中"}</div>
-                  </div>
-                );
-              })}
-            </div>
+          {view === "library" ? (
+            libGroups.length ? libGroups.map(([t, items]) => (
+              <div key={t.id}>
+                <div className="libhd">
+                  <span className="lt" style={{ color: t.color }}>{t.label}</span>
+                  <span className="ln mono">{items.length} 份材料</span>
+                </div>
+                {items.map((i) => <FeedCard key={i.id} item={i} starred={!!starred[i.id]} onStar={toggleStar} onOpen={setOpen} />)}
+              </div>
+            )) : (
+              <div className="empty"><b>该主题暂无材料</b>换个主题看看,或者去今日流</div>
+            )
           ) : view === "daily" ? (
             dayGroups.map(([day, items]) => {
               const wd = ["日", "一", "二", "三", "四", "五", "六"][new Date(day).getDay()];
@@ -577,8 +742,8 @@ export default function EnglishHot() {
             list.map((i) => <FeedCard key={i.id} item={i} starred={!!starred[i.id]} onStar={toggleStar} onOpen={setOpen} />)
           ) : (
             <div className="empty">
-              <b>{view === "starred" ? "还没有收藏" : "该主题暂无内容"}</b>
-              {view === "starred" ? "点条目右下角的星标,把值得回看的收进来" : "这个主题的信源正在接入,先看看别的"}
+              <b>{view === "starred" ? "还没有收藏" : "该主题今天没有内容"}</b>
+              {view === "starred" ? "点条目右下角的星标,把值得回看的收进来" : "今日流只放会过期的内容;不过期的都在素材库里"}
             </div>
           )}
         </div>

@@ -1,95 +1,5 @@
-// 由 pipeline.py 自动生成,勿手改 · 2026-07-21 00:03 UTC
+// 由 pipeline.py 自动生成,勿手改 · 2026-07-21 17:11 UTC
 export const ITEMS = [
-  {
-    "id": "b774a24ced",
-    "title": "What's in a footballer's brain?",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260716",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期讨论足球运动员如何应对点球、角球等高压时刻背后的大脑机制。6 分钟一集带完整文本,核心词围绕 pressure、brain、cope。",
-    "reason": "6 Minute English 是公认的听力入门神器,话题有趣、语速友好,精听影子跟读都好用。",
-    "topic": "listening",
-    "featured": true,
-    "heat": 72,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "How do footballers cope with high-pressure scenarios like penalties and corners?",
-    "expressions": [
-      {
-        "en": "cope with",
-        "cn": "应对、扛得住",
-        "note": "后接压力、困难"
-      },
-      {
-        "en": "under pressure",
-        "cn": "在压力之下",
-        "note": "高压时刻的固定说法"
-      },
-      {
-        "en": "penalty",
-        "cn": "点球、罚球"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "df834af182",
-    "title": "Passing ships",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260713",
-    "source": "BBC The English We Speak",
-    "source_weight": 0.9,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "地道表达 like passing ships:形容两个人各自忙碌、见面机会很少、擦肩而过。3 分钟一集讲透一个习语的用法和例句。",
-    "reason": "教材里学不到的地道习语,3 分钟一个,攒多了口语和写作立刻不土。",
-    "topic": "vocab",
-    "featured": true,
-    "heat": 70,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Use this expression to talk about busy adult life",
-    "expressions": [
-      {
-        "en": "like passing ships",
-        "cn": "擦肩而过、总碰不上面",
-        "note": "完整说法 like passing ships in the night"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "13d362a370",
-    "title": "The Wedding Day",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work/66-language-for-a-wedding-day",
-    "source": "BBC English at Work",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "职场情景剧《English at Work》大结局:Anna 和 Tom 的大喜之日,她会说出『I do』吗?在剧情里学婚礼与情感相关表达,带完整对话文本。",
-    "reason": "把职场英语拍成连续剧,追剧一样学表达,比背对话有意思得多。",
-    "topic": "speaking",
-    "featured": true,
-    "heat": 68,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "It's Anna and Tom's big day! Will Anna say 'I do'?",
-    "expressions": [
-      {
-        "en": "I do",
-        "cn": "（婚礼上）我愿意"
-      },
-      {
-        "en": "the big day",
-        "cn": "大喜之日、重要的日子"
-      }
-    ],
-    "evergreen": true
-  },
   {
     "id": "seed-cet-score",
     "title": "6 月四六级成绩 8 月下旬开放查询:查分通道与常见问题汇总",
@@ -111,8 +21,990 @@ export const ITEMS = [
       "中国教育在线"
     ],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
     "expressions": []
+  },
+  {
+    "id": "cd005679d3",
+    "title": "New species of monkey found in Congo rainforest",
+    "url": "https://breakingnewsenglish.com/2607/260720-new-monkey-species.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-07-20",
+    "time": "00:30",
+    "summary": "Breaking News English 当日分级新闻。同一篇配多档难度与慢速音频,生词表、填空、讨论题齐全,适合当天泛读一遍再精读一遍。",
+    "reason": "每天更新、难度可选,是最容易坚持下来的日更阅读材料 —— 先挑一档读完,别贪多。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 63,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Anthropologists have discovered a previously unknown monkey that has distinctive orange lips and a deep roaring whoop.",
+    "expressions": []
+  },
+  {
+    "id": "d4be04fd50",
+    "title": "Knee surgery may do more harm than good",
+    "url": "https://breakingnewsenglish.com/2607/260716-knee-surgery.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-07-16",
+    "time": "00:30",
+    "summary": "一项新研究指出,膝关节手术的实际效果可能不如预期,部分情况下弊大于利。适合练医疗健康类词汇:surgery、study、harm,分级新闻难度友好。",
+    "reason": "健康话题贴近生活、词汇实用,分级新闻还配有慢速音频和练习,精读泛听都合适。",
+    "topic": "reading",
+    "featured": true,
+    "heat": 54,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "A new study says knee surgery may do more harm than good.",
+    "expressions": [
+      {
+        "en": "do more harm than good",
+        "cn": "弊大于利"
+      },
+      {
+        "en": "surgery",
+        "cn": "手术",
+        "note": "不可数，have surgery 做手术"
+      },
+      {
+        "en": "study",
+        "cn": "研究",
+        "note": "A study suggests… 外刊高频开头"
+      }
+    ]
+  },
+  {
+    "id": "seed-toefl-autumn",
+    "title": "托福秋季机考安排发布:多城市新增下午场次",
+    "url": "https://www.toefl.cn/",
+    "source": "托福官方",
+    "source_weight": 1.0,
+    "captured": "2026-07-18",
+    "published": "2026-07-15",
+    "time": "11:00",
+    "summary": "秋季托福 iBT 场次表更新:多个城市新增周六下午场,家考(Home Edition)时段同步扩容。计划秋季申请季前出分的考生可尽早锁位。",
+    "reason": "赶秋季申请的话出分窗口很紧,新增场次意味着多一次抢考位的机会。",
+    "topic": "exam",
+    "featured": false,
+    "heat": 53,
+    "sources": [
+      "托福官方",
+      "小红书话题"
+    ],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": []
+  },
+  {
+    "id": "seed-ielts-seats",
+    "title": "雅思下半年考位放出:热门城市周末场余量告急",
+    "url": "https://ielts.neea.cn/",
+    "source": "中国教育在线",
+    "source_weight": 0.75,
+    "captured": "2026-07-18",
+    "published": "2026-07-17",
+    "time": "14:20",
+    "summary": "下半年雅思考位已开放报名,北上广深 9-10 月周末场余量紧张,机考场次相对充裕。建议先锁定考位再规划备考周期,改期需提前 14 天。",
+    "reason": "考位是先到先得,周末场每年这时候最抢手,先占位再慢慢备考才稳。",
+    "topic": "exam",
+    "featured": false,
+    "heat": 49,
+    "sources": [
+      "中国教育在线",
+      "雅思官方"
+    ],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": []
+  },
+  {
+    "id": "793409d269",
+    "title": "Rising memory chip prices to push up tech costs",
+    "url": "https://breakingnewsenglish.com/2606/260629-memory-chip-price-hikes.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-06-29",
+    "time": "00:30",
+    "summary": "内存芯片涨价,苹果、微软等科技巨头相应上调部分产品价格。科技财经短新闻,price hike、tech giant、raise 等词实用。",
+    "reason": "科技财经词汇考研外刊高频,用一条你关心的涨价新闻记 price hike 比背单词牢。",
+    "topic": "reading",
+    "featured": true,
+    "heat": 46,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Memory chip price hikes have caused tech giants Apple and Microsoft to raise prices for some of their products.",
+    "expressions": [
+      {
+        "en": "price hike",
+        "cn": "涨价",
+        "note": "外刊财经高频，比 price increase 更口语"
+      },
+      {
+        "en": "tech giant",
+        "cn": "科技巨头"
+      },
+      {
+        "en": "raise prices",
+        "cn": "上调价格"
+      }
+    ]
+  },
+  {
+    "id": "seed-gaokao-listening",
+    "title": "多地公布高考英语听说机考改革细则",
+    "url": "https://www.eol.cn/",
+    "source": "中国教育在线",
+    "source_weight": 0.75,
+    "captured": "2026-07-18",
+    "published": "2026-07-16",
+    "time": "08:50",
+    "summary": "多省份明确听说机考分值与题型:朗读短文、情景问答、话题简述三段式,人机对话形式。口语正式纳入总分,应试重心从『听得懂』转向『说得出』。",
+    "reason": "口语进高考总分是风向标,家有考生或做教学的都得盯着这条政策。",
+    "topic": "news",
+    "featured": false,
+    "heat": 46,
+    "sources": [
+      "中国教育在线",
+      "各省教育考试院",
+      "澎湃新闻"
+    ],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": []
+  },
+  {
+    "id": "36ab56e6e9",
+    "title": "Bayeux Tapestry back in UK after 900 years",
+    "url": "https://breakingnewsenglish.com/2607/260713-bayeux-tapestry.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-07-13",
+    "time": "00:30",
+    "summary": "贝叶挂毯时隔 900 多年重返英国展出。历史文化类短新闻,tapestry、return、century 等词配合背景故事,读起来有画面感。",
+    "reason": "拿真实文化新闻练阅读,比教材有意思;词汇难度分级,读完还能顺手学个历史梗。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 37,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "The Bayeux Tapestry has returned to Britain for the first time in more than 900 years.",
+    "expressions": [
+      {
+        "en": "tapestry",
+        "cn": "挂毯"
+      },
+      {
+        "en": "century",
+        "cn": "世纪"
+      },
+      {
+        "en": "return",
+        "cn": "回归、重返"
+      }
+    ]
+  },
+  {
+    "id": "seed-ket-pet",
+    "title": "剑桥 KET/PET 成绩开放查询,证书寄送时间说明",
+    "url": "https://mse.neea.edu.cn/",
+    "source": "沪江英语",
+    "source_weight": 0.7,
+    "captured": "2026-07-18",
+    "published": "2026-07-05",
+    "time": "09:40",
+    "summary": "上半年剑桥通用五级 KET/PET 成绩已可查询,纸质证书预计考后 3 个月内寄出。分数换算与 CEFR 等级对照见官网说明。",
+    "reason": "陪娃考 KET/PET 的家长看这条:查分入口 + 证书到手时间一次说清。",
+    "topic": "exam",
+    "featured": false,
+    "heat": 36,
+    "sources": [
+      "沪江英语",
+      "剑桥英语官方"
+    ],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": []
+  },
+  {
+    "id": "ca4ec1976b",
+    "title": "Prince Harry not allowed to stay at Buckingham Palace",
+    "url": "https://breakingnewsenglish.com/2607/260709-buckingham-palace.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-07-09",
+    "time": "00:30",
+    "summary": "哈里王子被告知访英期间不得入住白金汉宫。名人时事短文,句式简单、话题有热度,适合零负担的每日泛读。",
+    "reason": "英媒最爱的王室八卦,读着不累又能追热点,是坚持每天读英文的好由头。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 35,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Britain's Prince Harry has been told he will not be allowed to stay at Buckingham Palace while he is in the U.K.",
+    "expressions": []
+  },
+  {
+    "id": "5e39687699",
+    "title": "'Flamingo Revolution' protestors clash with police",
+    "url": "https://breakingnewsenglish.com/2607/260706-flamingo-revolution.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-07-06",
+    "time": "00:30",
+    "summary": "阿尔巴尼亚民众因自然保护区兴建豪华度假村与警方冲突,被称『火烈鸟革命』。时政环保类新闻,protest、clash、resort 等词成组出现。",
+    "reason": "环保 + 抗议是雅思托福写作高频主题,借这条真实新闻攒论点和地道表达。",
+    "topic": "news",
+    "featured": false,
+    "heat": 34,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Protestors in Albania have clashed with police over the planned construction of a luxury resort on a nature reserve.",
+    "expressions": [
+      {
+        "en": "protest",
+        "cn": "抗议"
+      },
+      {
+        "en": "clash with",
+        "cn": "与…发生冲突"
+      },
+      {
+        "en": "resort",
+        "cn": "度假村"
+      }
+    ]
+  },
+  {
+    "id": "83d898535c",
+    "title": "Soccer World Cup fans struggle with tipping culture",
+    "url": "https://breakingnewsenglish.com/2607/260702-tipping-world-cup.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-07-02",
+    "time": "00:30",
+    "summary": "世界杯球迷不适应当地小费文化。文化差异类轻松话题,tipping、culture、struggle 实用,适合练口语讨论和写作举例。",
+    "reason": "小费文化是口语考试经典话题,这条真实新闻直接给你现成的观点和例子。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 34,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Football supporters attending the World Cup are struggling with the tipping culture.",
+    "expressions": [
+      {
+        "en": "tipping culture",
+        "cn": "小费文化"
+      },
+      {
+        "en": "struggle to",
+        "cn": "难以做到…",
+        "note": "struggle to adapt 难以适应"
+      }
+    ]
+  },
+  {
+    "id": "b243323d85",
+    "title": "Lifting weights helps you to live longer",
+    "url": "https://breakingnewsenglish.com/2606/260625-strength-training.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-06-25",
+    "time": "00:30",
+    "summary": "研究表明规律的力量训练有助于延长寿命。健康健身话题,strength training、researcher、longer 等词,读完还能顺便被安利去撸铁。",
+    "reason": "健身 + 长寿是全民话题,词汇简单实用,适合刚开始每天读英文的人破冰。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 34,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Researchers have reported that regular strength training may help us to live longer.",
+    "expressions": [
+      {
+        "en": "strength training",
+        "cn": "力量训练"
+      },
+      {
+        "en": "live longer",
+        "cn": "活得更久"
+      },
+      {
+        "en": "researcher",
+        "cn": "研究人员"
+      }
+    ]
+  },
+  {
+    "id": "9b8b2b329d",
+    "title": "Hydration breaks booed at World Cup",
+    "url": "https://breakingnewsenglish.com/2606/260622-hydration-breaks-world-cup.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-06-22",
+    "time": "00:30",
+    "summary": "世界杯引入补水暂停引发球迷不满。体育时事短文,hydration、boo、introduce 等词,配合分级难度适合快速泛读。",
+    "reason": "球迷视角的真实吐槽,读起来有情绪、不枯燥,泛读练语感正合适。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 34,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Football fans worldwide are not happy about the introduction of hydration breaks at the World Cup.",
+    "expressions": [
+      {
+        "en": "hydration break",
+        "cn": "补水暂停"
+      },
+      {
+        "en": "boo",
+        "cn": "喝倒彩、发出嘘声",
+        "note": "观众表达不满"
+      },
+      {
+        "en": "introduce",
+        "cn": "引入、推出（新规）"
+      }
+    ]
+  },
+  {
+    "id": "8de544f2bb",
+    "title": "Google releases free 'Google Earth' flight simulator",
+    "url": "https://breakingnewsenglish.com/2606/260618-google-earth.html",
+    "source": "Breaking News English",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "2026-06-18",
+    "time": "00:30",
+    "summary": "谷歌宣布向公众免费开放其飞行模拟器。科技新品短新闻,release、simulator、available 等词实用,句子结构清晰好模仿。",
+    "reason": "科技新品词汇是写作万能素材,句子短、结构清,适合抄下来仿写练句式。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 34,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Google has announced it will make its flight simulator available to the public.",
+    "expressions": [
+      {
+        "en": "flight simulator",
+        "cn": "飞行模拟器"
+      },
+      {
+        "en": "release",
+        "cn": "发布、推出"
+      },
+      {
+        "en": "make sth available to",
+        "cn": "向…开放",
+        "note": "available to the public 向公众开放"
+      }
+    ]
+  },
+  {
+    "id": "b774a24ced",
+    "title": "What's in a footballer's brain?",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260716",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期讨论足球运动员如何应对点球、角球等高压时刻背后的大脑机制。6 分钟一集带完整文本,核心词围绕 pressure、brain、cope。",
+    "reason": "6 Minute English 是公认的听力入门神器,话题有趣、语速友好,精听影子跟读都好用。",
+    "topic": "listening",
+    "featured": true,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "How do footballers cope with high-pressure scenarios like penalties and corners?",
+    "expressions": [
+      {
+        "en": "cope with",
+        "cn": "应对、扛得住",
+        "note": "后接压力、困难"
+      },
+      {
+        "en": "under pressure",
+        "cn": "在压力之下",
+        "note": "高压时刻的固定说法"
+      },
+      {
+        "en": "penalty",
+        "cn": "点球、罚球"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "7937cc33d5",
+    "title": "Should we cycle more?",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260709",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期聊骑行:你多久骑一次车?围绕 cycle、commute、environment 展开,6 分钟对话配文本,适合通勤泛听 + 精听双用。",
+    "reason": "话题生活化、两位主持人一问一答节奏舒服,是从教材音频过渡到真实听力的好台阶。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "How often do you cycle?",
+    "expressions": [
+      {
+        "en": "commute",
+        "cn": "通勤",
+        "note": "名词动词同形，commute to work"
+      },
+      {
+        "en": "cycle",
+        "cn": "骑车",
+        "note": "英式常用，美式多说 bike"
+      },
+      {
+        "en": "environment",
+        "cn": "环境"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "89bcb46643",
+    "title": "Rude emails",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260702",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期主题『无礼邮件』:你收到过没礼貌的邮件吗?围绕 rude、uncivil、tone 展开,顺带学职场沟通用语,6 分钟带文本。",
+    "reason": "话题扎心又实用,顺便学一波职场邮件措辞,听力口语一起练。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "Have you ever received an uncivil email?",
+    "expressions": [
+      {
+        "en": "rude",
+        "cn": "无礼的、粗鲁的"
+      },
+      {
+        "en": "uncivil",
+        "cn": "失礼的、不客气的",
+        "note": "比 rude 更书面"
+      },
+      {
+        "en": "tone",
+        "cn": "语气",
+        "note": "邮件里常说 the tone of the email"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "24a0cc49fa",
+    "title": "Stress-free family meals",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260625",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期聊如何做到轻松无压的家庭聚餐,从小时候讨厌的食物聊起。围绕 stress-free、mealtime、picky 展开,6 分钟对话带文本。",
+    "reason": "家庭 + 食物话题人人有话说,是口语考试常考题,听完能直接复用里面的表达。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "What foods did you dislike when you were growing up?",
+    "expressions": [
+      {
+        "en": "stress-free",
+        "cn": "毫无压力的"
+      },
+      {
+        "en": "mealtime",
+        "cn": "用餐时间"
+      },
+      {
+        "en": "picky",
+        "cn": "挑剔的、挑食的",
+        "note": "a picky eater 挑食的人"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "589cd16e77",
+    "title": "Limiting screen time for children",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260618",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期讨论如何限制孩子的电子屏幕时间。围绕 screen time、device、limit 展开,教育话题词汇实用,6 分钟带完整文本。",
+    "reason": "屏幕时间是写作口语超高频话题,这一集直接给你观点 + 地道表达一整套。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "Children are spending too much time with electronic devices.",
+    "expressions": [
+      {
+        "en": "screen time",
+        "cn": "用屏时间"
+      },
+      {
+        "en": "device",
+        "cn": "电子设备"
+      },
+      {
+        "en": "limit",
+        "cn": "限制",
+        "note": "limit screen time 限制用屏时间"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "07a74acc6f",
+    "title": "How advertisers make us spend money",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260611",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期揭秘广告商如何让我们花钱,从『上次买了不需要的东西是什么时候』聊起。围绕 advertise、consumer、tempt 展开,6 分钟带文本。",
+    "reason": "消费主义是雅思托福写作热门,这集把相关词汇和论点用对话讲透了。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "When was the last time you bought something you didn't need?",
+    "expressions": [
+      {
+        "en": "advertise",
+        "cn": "打广告、宣传"
+      },
+      {
+        "en": "consumer",
+        "cn": "消费者"
+      },
+      {
+        "en": "tempt",
+        "cn": "诱惑、勾起购买欲",
+        "note": "be tempted to buy 忍不住想买"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "b144f845dd",
+    "title": "The power of poetry",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260604",
+    "source": "BBC 6 Minute English",
+    "source_weight": 0.95,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "本期聊诗歌的力量:你读诗或写诗吗?围绕 poetry、rhythm、emotion 展开,文学话题词汇有格调,6 分钟对话带文本。",
+    "reason": "换个文学话题练听力,词汇有质感,聊天时也能显得有内涵。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "6 分钟",
+    "lead_en": "Do you ever read or write poetry?",
+    "expressions": [
+      {
+        "en": "poetry",
+        "cn": "诗歌（总称）",
+        "note": "不可数；一首诗是 a poem"
+      },
+      {
+        "en": "rhythm",
+        "cn": "韵律、节奏"
+      },
+      {
+        "en": "emotion",
+        "cn": "情感"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "seed-bbc-6min",
+    "title": "BBC 6 Minute English 本周话题:为什么我们总在拖延?",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+    "source": "BBC Learning English",
+    "source_weight": 0.95,
+    "captured": "2026-07-18",
+    "published": "2026-07-17",
+    "time": "15:00",
+    "summary": "本周话题 procrastination:两位主持人讨论拖延心理学,核心词汇 put off、deadline、self-control。6 分钟一集带完整字幕,适合精听 + 影子跟读双用。",
+    "reason": "6 分钟一集、话题贴近生活,是从教材音频过渡到真实听力最舒服的台阶。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "",
+    "expressions": [],
+    "evergreen": true
+  },
+  {
+    "id": "a516e0b087",
+    "title": "Side quest",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260720",
+    "source": "BBC The English We Speak",
+    "source_weight": 0.9,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "BBC The English We Speak 本期讲一个地道表达。3 分钟一集,把用法、语境和例句讲透,教材里通常学不到。",
+    "reason": "3 分钟攒一个地道说法,积少成多,口语和写作立刻不土。",
+    "topic": "vocab",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "3 分钟",
+    "lead_en": "Sometimes you want to do something different. Learn an expression to talk about that here.",
+    "expressions": [],
+    "evergreen": true
+  },
+  {
+    "id": "df834af182",
+    "title": "Passing ships",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260713",
+    "source": "BBC The English We Speak",
+    "source_weight": 0.9,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "地道表达 like passing ships:形容两个人各自忙碌、见面机会很少、擦肩而过。3 分钟一集讲透一个习语的用法和例句。",
+    "reason": "教材里学不到的地道习语,3 分钟一个,攒多了口语和写作立刻不土。",
+    "topic": "vocab",
+    "featured": true,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "3 分钟",
+    "lead_en": "Use this expression to talk about busy adult life",
+    "expressions": [
+      {
+        "en": "like passing ships",
+        "cn": "擦肩而过、总碰不上面",
+        "note": "完整说法 like passing ships in the night"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "1b57921538",
+    "title": "Understood the assignment",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260706",
+    "source": "BBC The English We Speak",
+    "source_weight": 0.9,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "地道表达 understood the assignment:形容某人把某事做得恰到好处、完全领会了要求。源自社交媒体的流行说法,配情景例句。",
+    "reason": "这是母语者天天在用的网络流行语,学会它跟老外聊天瞬间拉近距离。",
+    "topic": "vocab",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "3 分钟",
+    "lead_en": "My friend dressed up as a fairy for the costume party – she understood the assignment",
+    "expressions": [
+      {
+        "en": "understood the assignment",
+        "cn": "完全领会要求、做得恰到好处",
+        "note": "社媒流行语，夸人做得到位"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "aa6dc15d92",
+    "title": "Onto something",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260629",
+    "source": "BBC The English We Speak",
+    "source_weight": 0.9,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "地道表达 be onto something:形容某人的想法或思路很可能是对的、有戏。3 分钟讲清用法,区别于 be onto someone。",
+    "reason": "一个词之差意思全变,这集帮你分清 onto something / someone,避免踩坑。",
+    "topic": "vocab",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "3 分钟",
+    "lead_en": "You might be onto something.",
+    "expressions": [
+      {
+        "en": "be onto something",
+        "cn": "思路对了、这想法有戏",
+        "note": "别和 be onto someone（识破某人）混"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "b429b29ee2",
+    "title": "Sell yourself short",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260622",
+    "source": "BBC The English We Speak",
+    "source_weight": 0.9,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "地道表达 sell yourself short:指低估自己、把自己看轻了。3 分钟讲用法和场景,鼓励式表达,面试自我介绍也能用。",
+    "reason": "面试和日常都超实用的一句话,学会了既能安慰别人也能给自己打气。",
+    "topic": "vocab",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "3 分钟",
+    "lead_en": "Don't sell yourself short!",
+    "expressions": [
+      {
+        "en": "sell yourself short",
+        "cn": "低估自己、把自己看轻",
+        "note": "常用 Don't sell yourself short"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "c452e86a28",
+    "title": "Wrap it up",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260615",
+    "source": "BBC The English We Speak",
+    "source_weight": 0.9,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "地道表达 wrap it up:指收尾、结束一件事(会议、项目、演讲)。3 分钟讲清多种场景用法,职场高频。",
+    "reason": "开会做展示收尾时的万能一句,职场英语必备,学完马上能用。",
+    "topic": "vocab",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "3 分钟",
+    "lead_en": "What do you need to think about when wrapping up a project?",
+    "expressions": [
+      {
+        "en": "wrap it up",
+        "cn": "收尾、结束（会议/项目）",
+        "note": "开会收尾万能句 Let's wrap it up"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "seed-economist-ai-jobs",
+    "title": "《经济学人》封面拆解:AI 与就业市场,长难句逐句精读",
+    "url": "https://www.economist.com/",
+    "source": "外刊精读",
+    "source_weight": 0.9,
+    "captured": "2026-07-18",
+    "published": "2026-07-16",
+    "time": "20:15",
+    "summary": "本周封面谈 AI 对白领岗位的冲击。拆解 5 个典型长难句:倒装、插入语、虚拟语气各有示范,考研阅读同款句式,附核心词表 30 个。",
+    "reason": "考研阅读的长难句就出自这类外刊,拿封面文章练精读,一举两得。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 0,
+    "sources": [
+      "外刊精读",
+      "经济学人商论"
+    ],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": [],
+    "evergreen": true
+  },
+  {
+    "id": "seed-voa-slow",
+    "title": "VOA 慢速英语:适合精听起步的 5 个栏目怎么选",
+    "url": "https://learningenglish.voanews.com/",
+    "source": "VOA Learning English",
+    "source_weight": 0.9,
+    "captured": "2026-07-18",
+    "published": "",
+    "time": "",
+    "summary": "As It Is 新闻短平快,Health & Lifestyle 词汇亲民,American Stories 适合泛听,Everyday Grammar 顺带补语法。语速 90-100 词/分钟,是从教材音频过渡到真实语料的桥梁。",
+    "reason": "听力起步最怕选错材料,这份按栏目难度分层,照着选就不会一上来被劝退。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": [],
+    "evergreen": true
+  },
+  {
+    "id": "13d362a370",
+    "title": "The Wedding Day",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work/66-language-for-a-wedding-day",
+    "source": "BBC English at Work",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "职场情景剧《English at Work》大结局:Anna 和 Tom 的大喜之日,她会说出『I do』吗?在剧情里学婚礼与情感相关表达,带完整对话文本。",
+    "reason": "把职场英语拍成连续剧,追剧一样学表达,比背对话有意思得多。",
+    "topic": "speaking",
+    "featured": true,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "It's Anna and Tom's big day! Will Anna say 'I do'?",
+    "expressions": [
+      {
+        "en": "I do",
+        "cn": "（婚礼上）我愿意"
+      },
+      {
+        "en": "the big day",
+        "cn": "大喜之日、重要的日子"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "6172588e76",
+    "title": "Last call for Tom",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work/65-language-to-say-youve-changed-your-mind",
+    "source": "BBC English at Work",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "《English at Work》情景剧:Tom 即将赴澳洲开始新生活,Anna 才意识到自己的真心。学『改变主意 / 表达感受』的地道说法,带文本。",
+    "reason": "剧情有张力,顺着故事把『改主意、表心意』的表达记住,场景感很强。",
+    "topic": "speaking",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Just as Tom leaves to start a new life in Australia, Anna realises her true feelings. Will she be able to catch him before he's gone for good?",
+    "expressions": [
+      {
+        "en": "change one's mind",
+        "cn": "改变主意"
+      },
+      {
+        "en": "have feelings for sb",
+        "cn": "对某人有感觉"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "1c182c6e7e",
+    "title": "Something's missing",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work/64-language-for-getting-down-to-business",
+    "source": "BBC English at Work",
+    "source_weight": 0.85,
+    "captured": "2026-07-21",
+    "published": "",
+    "time": "",
+    "summary": "《English at Work》情景剧:Tom 求婚被拒后离开,Tip Top Trading 还能回到从前吗?学『进入正题、谈业务』的职场用语,带完整对话。",
+    "reason": "职场 + 情感双线剧情,学『言归正传谈生意』的说法,开会时用得上。",
+    "topic": "speaking",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "en",
+    "duration": "",
+    "lead_en": "Tom's walked out after Anna rejected his marriage proposal. Will things at Tip Top Trading ever be the same again?",
+    "expressions": [
+      {
+        "en": "get down to business",
+        "cn": "言归正传、开始谈正事",
+        "note": "开会切入正题的经典句"
+      },
+      {
+        "en": "back to normal",
+        "cn": "回到从前、恢复正常"
+      }
+    ],
+    "evergreen": true
+  },
+  {
+    "id": "seed-chinadaily-citywalk",
+    "title": "China Daily 双语:City Walk 为何成为年轻人的新宠",
+    "url": "https://language.chinadaily.com.cn/",
+    "source": "China Daily 双语",
+    "source_weight": 0.85,
+    "captured": "2026-07-18",
+    "published": "2026-07-17",
+    "time": "16:05",
+    "summary": "双语报道城市漫步热潮,实用表达:immersive experience(沉浸式体验)、hidden gems(小众宝藏地)、slow-paced lifestyle(慢节奏生活)。中英对照,适合积累地道表达。",
+    "reason": "热点话题的地道说法,写作口语都能直接用,比背孤立单词有画面感。",
+    "topic": "reading",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": [],
+    "evergreen": true
   },
   {
     "id": "seed-morning-routine",
@@ -127,9 +1019,10 @@ export const ITEMS = [
     "reason": "光收藏材料不成体系?这套流程直接点开就能跟着计时练,今天就能开始。",
     "topic": "method",
     "featured": true,
-    "heat": 66,
+    "heat": 0,
     "sources": [],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
     "expressions": [],
     "evergreen": true,
@@ -181,511 +1074,6 @@ export const ITEMS = [
     ]
   },
   {
-    "id": "cd005679d3",
-    "title": "New species of monkey found in Congo rainforest",
-    "url": "https://breakingnewsenglish.com/2607/260720-new-monkey-species.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-07-20",
-    "time": "00:30",
-    "summary": "Breaking News English 当日分级新闻。同一篇配多档难度与慢速音频,生词表、填空、讨论题齐全,适合当天泛读一遍再精读一遍。",
-    "reason": "每天更新、难度可选,是最容易坚持下来的日更阅读材料 —— 先挑一档读完,别贪多。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 63,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Anthropologists have discovered a previously unknown monkey that has distinctive orange lips and a deep roaring whoop.",
-    "expressions": []
-  },
-  {
-    "id": "7937cc33d5",
-    "title": "Should we cycle more?",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260709",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期聊骑行:你多久骑一次车?围绕 cycle、commute、environment 展开,6 分钟对话配文本,适合通勤泛听 + 精听双用。",
-    "reason": "话题生活化、两位主持人一问一答节奏舒服,是从教材音频过渡到真实听力的好台阶。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 60,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "How often do you cycle?",
-    "expressions": [
-      {
-        "en": "commute",
-        "cn": "通勤",
-        "note": "名词动词同形，commute to work"
-      },
-      {
-        "en": "cycle",
-        "cn": "骑车",
-        "note": "英式常用，美式多说 bike"
-      },
-      {
-        "en": "environment",
-        "cn": "环境"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "89bcb46643",
-    "title": "Rude emails",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260702",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期主题『无礼邮件』:你收到过没礼貌的邮件吗?围绕 rude、uncivil、tone 展开,顺带学职场沟通用语,6 分钟带文本。",
-    "reason": "话题扎心又实用,顺便学一波职场邮件措辞,听力口语一起练。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 60,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Have you ever received an uncivil email?",
-    "expressions": [
-      {
-        "en": "rude",
-        "cn": "无礼的、粗鲁的"
-      },
-      {
-        "en": "uncivil",
-        "cn": "失礼的、不客气的",
-        "note": "比 rude 更书面"
-      },
-      {
-        "en": "tone",
-        "cn": "语气",
-        "note": "邮件里常说 the tone of the email"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "24a0cc49fa",
-    "title": "Stress-free family meals",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260625",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期聊如何做到轻松无压的家庭聚餐,从小时候讨厌的食物聊起。围绕 stress-free、mealtime、picky 展开,6 分钟对话带文本。",
-    "reason": "家庭 + 食物话题人人有话说,是口语考试常考题,听完能直接复用里面的表达。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 60,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "What foods did you dislike when you were growing up?",
-    "expressions": [
-      {
-        "en": "stress-free",
-        "cn": "毫无压力的"
-      },
-      {
-        "en": "mealtime",
-        "cn": "用餐时间"
-      },
-      {
-        "en": "picky",
-        "cn": "挑剔的、挑食的",
-        "note": "a picky eater 挑食的人"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "589cd16e77",
-    "title": "Limiting screen time for children",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260618",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期讨论如何限制孩子的电子屏幕时间。围绕 screen time、device、limit 展开,教育话题词汇实用,6 分钟带完整文本。",
-    "reason": "屏幕时间是写作口语超高频话题,这一集直接给你观点 + 地道表达一整套。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 60,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Children are spending too much time with electronic devices.",
-    "expressions": [
-      {
-        "en": "screen time",
-        "cn": "用屏时间"
-      },
-      {
-        "en": "device",
-        "cn": "电子设备"
-      },
-      {
-        "en": "limit",
-        "cn": "限制",
-        "note": "limit screen time 限制用屏时间"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "07a74acc6f",
-    "title": "How advertisers make us spend money",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260611",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期揭秘广告商如何让我们花钱,从『上次买了不需要的东西是什么时候』聊起。围绕 advertise、consumer、tempt 展开,6 分钟带文本。",
-    "reason": "消费主义是雅思托福写作热门,这集把相关词汇和论点用对话讲透了。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 60,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "When was the last time you bought something you didn't need?",
-    "expressions": [
-      {
-        "en": "advertise",
-        "cn": "打广告、宣传"
-      },
-      {
-        "en": "consumer",
-        "cn": "消费者"
-      },
-      {
-        "en": "tempt",
-        "cn": "诱惑、勾起购买欲",
-        "note": "be tempted to buy 忍不住想买"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "b144f845dd",
-    "title": "The power of poetry",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260604",
-    "source": "BBC 6 Minute English",
-    "source_weight": 0.95,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "本期聊诗歌的力量:你读诗或写诗吗?围绕 poetry、rhythm、emotion 展开,文学话题词汇有格调,6 分钟对话带文本。",
-    "reason": "换个文学话题练听力,词汇有质感,聊天时也能显得有内涵。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 60,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Do you ever read or write poetry?",
-    "expressions": [
-      {
-        "en": "poetry",
-        "cn": "诗歌（总称）",
-        "note": "不可数；一首诗是 a poem"
-      },
-      {
-        "en": "rhythm",
-        "cn": "韵律、节奏"
-      },
-      {
-        "en": "emotion",
-        "cn": "情感"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "a516e0b087",
-    "title": "Side quest",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260720",
-    "source": "BBC The English We Speak",
-    "source_weight": 0.9,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "BBC The English We Speak 本期讲一个地道表达。3 分钟一集,把用法、语境和例句讲透,教材里通常学不到。",
-    "reason": "3 分钟攒一个地道说法,积少成多,口语和写作立刻不土。",
-    "topic": "vocab",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Sometimes you want to do something different. Learn an expression to talk about that here.",
-    "expressions": [],
-    "evergreen": true
-  },
-  {
-    "id": "1b57921538",
-    "title": "Understood the assignment",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260706",
-    "source": "BBC The English We Speak",
-    "source_weight": 0.9,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "地道表达 understood the assignment:形容某人把某事做得恰到好处、完全领会了要求。源自社交媒体的流行说法,配情景例句。",
-    "reason": "这是母语者天天在用的网络流行语,学会它跟老外聊天瞬间拉近距离。",
-    "topic": "vocab",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "My friend dressed up as a fairy for the costume party – she understood the assignment",
-    "expressions": [
-      {
-        "en": "understood the assignment",
-        "cn": "完全领会要求、做得恰到好处",
-        "note": "社媒流行语，夸人做得到位"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "aa6dc15d92",
-    "title": "Onto something",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260629",
-    "source": "BBC The English We Speak",
-    "source_weight": 0.9,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "地道表达 be onto something:形容某人的想法或思路很可能是对的、有戏。3 分钟讲清用法,区别于 be onto someone。",
-    "reason": "一个词之差意思全变,这集帮你分清 onto something / someone,避免踩坑。",
-    "topic": "vocab",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "You might be onto something.",
-    "expressions": [
-      {
-        "en": "be onto something",
-        "cn": "思路对了、这想法有戏",
-        "note": "别和 be onto someone（识破某人）混"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "b429b29ee2",
-    "title": "Sell yourself short",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260622",
-    "source": "BBC The English We Speak",
-    "source_weight": 0.9,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "地道表达 sell yourself short:指低估自己、把自己看轻了。3 分钟讲用法和场景,鼓励式表达,面试自我介绍也能用。",
-    "reason": "面试和日常都超实用的一句话,学会了既能安慰别人也能给自己打气。",
-    "topic": "vocab",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Don't sell yourself short!",
-    "expressions": [
-      {
-        "en": "sell yourself short",
-        "cn": "低估自己、把自己看轻",
-        "note": "常用 Don't sell yourself short"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "c452e86a28",
-    "title": "Wrap it up",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak_2026/ep-260615",
-    "source": "BBC The English We Speak",
-    "source_weight": 0.9,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "地道表达 wrap it up:指收尾、结束一件事(会议、项目、演讲)。3 分钟讲清多种场景用法,职场高频。",
-    "reason": "开会做展示收尾时的万能一句,职场英语必备,学完马上能用。",
-    "topic": "vocab",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "What do you need to think about when wrapping up a project?",
-    "expressions": [
-      {
-        "en": "wrap it up",
-        "cn": "收尾、结束（会议/项目）",
-        "note": "开会收尾万能句 Let's wrap it up"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "seed-voa-slow",
-    "title": "VOA 慢速英语:适合精听起步的 5 个栏目怎么选",
-    "url": "https://learningenglish.voanews.com/",
-    "source": "VOA Learning English",
-    "source_weight": 0.9,
-    "captured": "2026-07-18",
-    "published": "",
-    "time": "",
-    "summary": "As It Is 新闻短平快,Health & Lifestyle 词汇亲民,American Stories 适合泛听,Everyday Grammar 顺带补语法。语速 90-100 词/分钟,是从教材音频过渡到真实语料的桥梁。",
-    "reason": "听力起步最怕选错材料,这份按栏目难度分层,照着选就不会一上来被劝退。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": [],
-    "evergreen": true
-  },
-  {
-    "id": "seed-root-spect",
-    "title": "高频词根 -spect-:一个词根带出 20 个四六级必会词",
-    "url": "https://www.hjenglish.com/ciku/",
-    "source": "沪江英语",
-    "source_weight": 0.7,
-    "captured": "2026-07-18",
-    "published": "",
-    "time": "",
-    "summary": "spect = 看:inspect 检查、prospect 前景、retrospect 回顾、spectator 观众……一张词根图串起 20 个高频词,比孤立背单词记得牢,四六级阅读高频出现。",
-    "reason": "背单词记了就忘?按词根成串记,一次拿下 20 个,还能猜出没见过的生词。",
-    "topic": "vocab",
-    "featured": false,
-    "heat": 58,
-    "sources": [],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": [],
-    "evergreen": true
-  },
-  {
-    "id": "6172588e76",
-    "title": "Last call for Tom",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work/65-language-to-say-youve-changed-your-mind",
-    "source": "BBC English at Work",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "《English at Work》情景剧:Tom 即将赴澳洲开始新生活,Anna 才意识到自己的真心。学『改变主意 / 表达感受』的地道说法,带文本。",
-    "reason": "剧情有张力,顺着故事把『改主意、表心意』的表达记住,场景感很强。",
-    "topic": "speaking",
-    "featured": false,
-    "heat": 56,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Just as Tom leaves to start a new life in Australia, Anna realises her true feelings. Will she be able to catch him before he's gone for good?",
-    "expressions": [
-      {
-        "en": "change one's mind",
-        "cn": "改变主意"
-      },
-      {
-        "en": "have feelings for sb",
-        "cn": "对某人有感觉"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "1c182c6e7e",
-    "title": "Something's missing",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work/64-language-for-getting-down-to-business",
-    "source": "BBC English at Work",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "",
-    "time": "",
-    "summary": "《English at Work》情景剧:Tom 求婚被拒后离开,Tip Top Trading 还能回到从前吗?学『进入正题、谈业务』的职场用语,带完整对话。",
-    "reason": "职场 + 情感双线剧情,学『言归正传谈生意』的说法,开会时用得上。",
-    "topic": "speaking",
-    "featured": false,
-    "heat": 56,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Tom's walked out after Anna rejected his marriage proposal. Will things at Tip Top Trading ever be the same again?",
-    "expressions": [
-      {
-        "en": "get down to business",
-        "cn": "言归正传、开始谈正事",
-        "note": "开会切入正题的经典句"
-      },
-      {
-        "en": "back to normal",
-        "cn": "回到从前、恢复正常"
-      }
-    ],
-    "evergreen": true
-  },
-  {
-    "id": "seed-ai-speaking",
-    "title": "AI 口语陪练应用横评:免费额度、纠音能力、话题库对比",
-    "url": "https://www.hjenglish.com/",
-    "source": "站内整理",
-    "source_weight": 0.8,
-    "captured": "2026-07-18",
-    "published": "2026-07-17",
-    "time": "18:40",
-    "summary": "实测主流 AI 口语应用:纠音颗粒度、对话自然度、免费额度差异明显。结论:日常陪聊选对话流畅的,备考雅思托福选带评分细则反馈的,零基础先用跟读打分类。",
-    "reason": "想找 AI 练口语又怕踩坑?这篇按『你的目标』给结论,省下你一个个试的时间。",
-    "topic": "speaking",
-    "featured": true,
-    "heat": 55,
-    "sources": [
-      "站内整理",
-      "少数派",
-      "小红书话题"
-    ],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "d4be04fd50",
-    "title": "Knee surgery may do more harm than good",
-    "url": "https://breakingnewsenglish.com/2607/260716-knee-surgery.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-07-16",
-    "time": "00:30",
-    "summary": "一项新研究指出,膝关节手术的实际效果可能不如预期,部分情况下弊大于利。适合练医疗健康类词汇:surgery、study、harm,分级新闻难度友好。",
-    "reason": "健康话题贴近生活、词汇实用,分级新闻还配有慢速音频和练习,精读泛听都合适。",
-    "topic": "reading",
-    "featured": true,
-    "heat": 54,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "A new study says knee surgery may do more harm than good.",
-    "expressions": [
-      {
-        "en": "do more harm than good",
-        "cn": "弊大于利"
-      },
-      {
-        "en": "surgery",
-        "cn": "手术",
-        "note": "不可数，have surgery 做手术"
-      },
-      {
-        "en": "study",
-        "cn": "研究",
-        "note": "A study suggests… 外刊高频开头"
-      }
-    ]
-  },
-  {
     "id": "seed-shadowing-guide",
     "title": "影子跟读入门:一次 10 分钟的标准训练流程",
     "url": "https://learningenglish.voanews.com/",
@@ -698,9 +1086,10 @@ export const ITEMS = [
     "reason": "都说影子跟读神,但没人教怎么开始——这套四步流程点开就能跟着计时练。",
     "topic": "speaking",
     "featured": false,
-    "heat": 54,
+    "heat": 0,
     "sources": [],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
     "expressions": [],
     "evergreen": true,
@@ -752,6 +1141,31 @@ export const ITEMS = [
     ]
   },
   {
+    "id": "seed-ai-speaking",
+    "title": "AI 口语陪练应用横评:免费额度、纠音能力、话题库对比",
+    "url": "https://www.hjenglish.com/",
+    "source": "站内整理",
+    "source_weight": 0.8,
+    "captured": "2026-07-18",
+    "published": "2026-07-17",
+    "time": "18:40",
+    "summary": "实测主流 AI 口语应用:纠音颗粒度、对话自然度、免费额度差异明显。结论:日常陪聊选对话流畅的,备考雅思托福选带评分细则反馈的,零基础先用跟读打分类。",
+    "reason": "想找 AI 练口语又怕踩坑?这篇按『你的目标』给结论,省下你一个个试的时间。",
+    "topic": "speaking",
+    "featured": true,
+    "heat": 0,
+    "sources": [
+      "站内整理",
+      "少数派",
+      "小红书话题"
+    ],
+    "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": [],
+    "evergreen": true
+  },
+  {
     "id": "seed-anki-setup",
     "title": "Anki 记单词进阶:间隔重复参数与模板设置指南",
     "url": "https://apps.ankiweb.net/",
@@ -764,9 +1178,10 @@ export const ITEMS = [
     "reason": "Anki 默认参数背单词其实很费劲,调对了每天省一半复习时间。",
     "topic": "vocab",
     "featured": false,
-    "heat": 54,
+    "heat": 0,
     "sources": [],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
     "expressions": [],
     "evergreen": true
@@ -784,9 +1199,31 @@ export const ITEMS = [
     "reason": "没外教没语伴照样练口语,这三招都是零成本、今晚就能上手的。",
     "topic": "speaking",
     "featured": false,
-    "heat": 54,
+    "heat": 0,
     "sources": [],
     "lang": "zh",
+    "duration": "",
+    "lead_en": "",
+    "expressions": [],
+    "evergreen": true
+  },
+  {
+    "id": "seed-podcast-picks",
+    "title": "通勤路上听什么:2026 年值得订阅的 8 档英语播客",
+    "url": "https://www.hjenglish.com/tingli/",
+    "source": "站内整理",
+    "source_weight": 0.8,
+    "captured": "2026-07-18",
+    "published": "2026-07-12",
+    "time": "17:48",
+    "summary": "按难度分层:入门 Culips、进阶 All Ears English、原速 The Daily 与 Planet Money。通勤泛听选熟悉话题,别贪原速新闻,听得懂 80% 的材料才涨听力。",
+    "reason": "通勤那半小时别浪费,按难度选一档,泛听也能悄悄涨听力。",
+    "topic": "listening",
+    "featured": false,
+    "heat": 0,
+    "sources": [],
+    "lang": "zh",
+    "duration": "",
     "lead_en": "",
     "expressions": [],
     "evergreen": true
@@ -804,36 +1241,37 @@ export const ITEMS = [
     "reason": "暑假是考研英语拉分的关键 40 天,这套节奏把『真题刷几遍怎么刷』说透了。",
     "topic": "exam",
     "featured": true,
-    "heat": 53,
+    "heat": 0,
     "sources": [
       "沪江英语",
       "考研帮"
     ],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
-    "expressions": []
+    "expressions": [],
+    "evergreen": true
   },
   {
-    "id": "seed-toefl-autumn",
-    "title": "托福秋季机考安排发布:多城市新增下午场次",
-    "url": "https://www.toefl.cn/",
-    "source": "托福官方",
-    "source_weight": 1.0,
+    "id": "seed-root-spect",
+    "title": "高频词根 -spect-:一个词根带出 20 个四六级必会词",
+    "url": "https://www.hjenglish.com/ciku/",
+    "source": "沪江英语",
+    "source_weight": 0.7,
     "captured": "2026-07-18",
-    "published": "2026-07-15",
-    "time": "11:00",
-    "summary": "秋季托福 iBT 场次表更新:多个城市新增周六下午场,家考(Home Edition)时段同步扩容。计划秋季申请季前出分的考生可尽早锁位。",
-    "reason": "赶秋季申请的话出分窗口很紧,新增场次意味着多一次抢考位的机会。",
-    "topic": "exam",
+    "published": "",
+    "time": "",
+    "summary": "spect = 看:inspect 检查、prospect 前景、retrospect 回顾、spectator 观众……一张词根图串起 20 个高频词,比孤立背单词记得牢,四六级阅读高频出现。",
+    "reason": "背单词记了就忘?按词根成串记,一次拿下 20 个,还能猜出没见过的生词。",
+    "topic": "vocab",
     "featured": false,
-    "heat": 53,
-    "sources": [
-      "托福官方",
-      "小红书话题"
-    ],
+    "heat": 0,
+    "sources": [],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
-    "expressions": []
+    "expressions": [],
+    "evergreen": true
   },
   {
     "id": "seed-writing-template",
@@ -848,403 +1286,16 @@ export const ITEMS = [
     "reason": "你背的万能模板,阅卷人一眼就腻了——这篇教你怎么写得像人话又不失分。",
     "topic": "method",
     "featured": true,
-    "heat": 51,
+    "heat": 0,
     "sources": [
       "沪江英语",
       "考研帮",
       "知乎话题"
     ],
     "lang": "zh",
+    "duration": "",
     "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "seed-bbc-6min",
-    "title": "BBC 6 Minute English 本周话题:为什么我们总在拖延?",
-    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
-    "source": "BBC Learning English",
-    "source_weight": 0.95,
-    "captured": "2026-07-18",
-    "published": "2026-07-17",
-    "time": "15:00",
-    "summary": "本周话题 procrastination:两位主持人讨论拖延心理学,核心词汇 put off、deadline、self-control。6 分钟一集带完整字幕,适合精听 + 影子跟读双用。",
-    "reason": "6 分钟一集、话题贴近生活,是从教材音频过渡到真实听力最舒服的台阶。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 49,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "seed-ielts-seats",
-    "title": "雅思下半年考位放出:热门城市周末场余量告急",
-    "url": "https://ielts.neea.cn/",
-    "source": "中国教育在线",
-    "source_weight": 0.75,
-    "captured": "2026-07-18",
-    "published": "2026-07-17",
-    "time": "14:20",
-    "summary": "下半年雅思考位已开放报名,北上广深 9-10 月周末场余量紧张,机考场次相对充裕。建议先锁定考位再规划备考周期,改期需提前 14 天。",
-    "reason": "考位是先到先得,周末场每年这时候最抢手,先占位再慢慢备考才稳。",
-    "topic": "exam",
-    "featured": false,
-    "heat": 49,
-    "sources": [
-      "中国教育在线",
-      "雅思官方"
-    ],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "793409d269",
-    "title": "Rising memory chip prices to push up tech costs",
-    "url": "https://breakingnewsenglish.com/2606/260629-memory-chip-price-hikes.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-06-29",
-    "time": "00:30",
-    "summary": "内存芯片涨价,苹果、微软等科技巨头相应上调部分产品价格。科技财经短新闻,price hike、tech giant、raise 等词实用。",
-    "reason": "科技财经词汇考研外刊高频,用一条你关心的涨价新闻记 price hike 比背单词牢。",
-    "topic": "reading",
-    "featured": true,
-    "heat": 46,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Memory chip price hikes have caused tech giants Apple and Microsoft to raise prices for some of their products.",
-    "expressions": [
-      {
-        "en": "price hike",
-        "cn": "涨价",
-        "note": "外刊财经高频，比 price increase 更口语"
-      },
-      {
-        "en": "tech giant",
-        "cn": "科技巨头"
-      },
-      {
-        "en": "raise prices",
-        "cn": "上调价格"
-      }
-    ]
-  },
-  {
-    "id": "seed-gaokao-listening",
-    "title": "多地公布高考英语听说机考改革细则",
-    "url": "https://www.eol.cn/",
-    "source": "中国教育在线",
-    "source_weight": 0.75,
-    "captured": "2026-07-18",
-    "published": "2026-07-16",
-    "time": "08:50",
-    "summary": "多省份明确听说机考分值与题型:朗读短文、情景问答、话题简述三段式,人机对话形式。口语正式纳入总分,应试重心从『听得懂』转向『说得出』。",
-    "reason": "口语进高考总分是风向标,家有考生或做教学的都得盯着这条政策。",
-    "topic": "news",
-    "featured": false,
-    "heat": 46,
-    "sources": [
-      "中国教育在线",
-      "各省教育考试院",
-      "澎湃新闻"
-    ],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "seed-chinadaily-citywalk",
-    "title": "China Daily 双语:City Walk 为何成为年轻人的新宠",
-    "url": "https://language.chinadaily.com.cn/",
-    "source": "China Daily 双语",
-    "source_weight": 0.85,
-    "captured": "2026-07-18",
-    "published": "2026-07-17",
-    "time": "16:05",
-    "summary": "双语报道城市漫步热潮,实用表达:immersive experience(沉浸式体验)、hidden gems(小众宝藏地)、slow-paced lifestyle(慢节奏生活)。中英对照,适合积累地道表达。",
-    "reason": "热点话题的地道说法,写作口语都能直接用,比背孤立单词有画面感。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 45,
-    "sources": [],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "seed-economist-ai-jobs",
-    "title": "《经济学人》封面拆解:AI 与就业市场,长难句逐句精读",
-    "url": "https://www.economist.com/",
-    "source": "外刊精读",
-    "source_weight": 0.9,
-    "captured": "2026-07-18",
-    "published": "2026-07-16",
-    "time": "20:15",
-    "summary": "本周封面谈 AI 对白领岗位的冲击。拆解 5 个典型长难句:倒装、插入语、虚拟语气各有示范,考研阅读同款句式,附核心词表 30 个。",
-    "reason": "考研阅读的长难句就出自这类外刊,拿封面文章练精读,一举两得。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 44,
-    "sources": [
-      "外刊精读",
-      "经济学人商论"
-    ],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "36ab56e6e9",
-    "title": "Bayeux Tapestry back in UK after 900 years",
-    "url": "https://breakingnewsenglish.com/2607/260713-bayeux-tapestry.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-07-13",
-    "time": "00:30",
-    "summary": "贝叶挂毯时隔 900 多年重返英国展出。历史文化类短新闻,tapestry、return、century 等词配合背景故事,读起来有画面感。",
-    "reason": "拿真实文化新闻练阅读,比教材有意思;词汇难度分级,读完还能顺手学个历史梗。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 37,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "The Bayeux Tapestry has returned to Britain for the first time in more than 900 years.",
-    "expressions": [
-      {
-        "en": "tapestry",
-        "cn": "挂毯"
-      },
-      {
-        "en": "century",
-        "cn": "世纪"
-      },
-      {
-        "en": "return",
-        "cn": "回归、重返"
-      }
-    ]
-  },
-  {
-    "id": "seed-ket-pet",
-    "title": "剑桥 KET/PET 成绩开放查询,证书寄送时间说明",
-    "url": "https://mse.neea.edu.cn/",
-    "source": "沪江英语",
-    "source_weight": 0.7,
-    "captured": "2026-07-18",
-    "published": "2026-07-05",
-    "time": "09:40",
-    "summary": "上半年剑桥通用五级 KET/PET 成绩已可查询,纸质证书预计考后 3 个月内寄出。分数换算与 CEFR 等级对照见官网说明。",
-    "reason": "陪娃考 KET/PET 的家长看这条:查分入口 + 证书到手时间一次说清。",
-    "topic": "exam",
-    "featured": false,
-    "heat": 36,
-    "sources": [
-      "沪江英语",
-      "剑桥英语官方"
-    ],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
-  },
-  {
-    "id": "ca4ec1976b",
-    "title": "Prince Harry not allowed to stay at Buckingham Palace",
-    "url": "https://breakingnewsenglish.com/2607/260709-buckingham-palace.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-07-09",
-    "time": "00:30",
-    "summary": "哈里王子被告知访英期间不得入住白金汉宫。名人时事短文,句式简单、话题有热度,适合零负担的每日泛读。",
-    "reason": "英媒最爱的王室八卦,读着不累又能追热点,是坚持每天读英文的好由头。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 35,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Britain's Prince Harry has been told he will not be allowed to stay at Buckingham Palace while he is in the U.K.",
-    "expressions": []
-  },
-  {
-    "id": "5e39687699",
-    "title": "'Flamingo Revolution' protestors clash with police",
-    "url": "https://breakingnewsenglish.com/2607/260706-flamingo-revolution.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-07-06",
-    "time": "00:30",
-    "summary": "阿尔巴尼亚民众因自然保护区兴建豪华度假村与警方冲突,被称『火烈鸟革命』。时政环保类新闻,protest、clash、resort 等词成组出现。",
-    "reason": "环保 + 抗议是雅思托福写作高频主题,借这条真实新闻攒论点和地道表达。",
-    "topic": "news",
-    "featured": false,
-    "heat": 34,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Protestors in Albania have clashed with police over the planned construction of a luxury resort on a nature reserve.",
-    "expressions": [
-      {
-        "en": "protest",
-        "cn": "抗议"
-      },
-      {
-        "en": "clash with",
-        "cn": "与…发生冲突"
-      },
-      {
-        "en": "resort",
-        "cn": "度假村"
-      }
-    ]
-  },
-  {
-    "id": "83d898535c",
-    "title": "Soccer World Cup fans struggle with tipping culture",
-    "url": "https://breakingnewsenglish.com/2607/260702-tipping-world-cup.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-07-02",
-    "time": "00:30",
-    "summary": "世界杯球迷不适应当地小费文化。文化差异类轻松话题,tipping、culture、struggle 实用,适合练口语讨论和写作举例。",
-    "reason": "小费文化是口语考试经典话题,这条真实新闻直接给你现成的观点和例子。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 34,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Football supporters attending the World Cup are struggling with the tipping culture.",
-    "expressions": [
-      {
-        "en": "tipping culture",
-        "cn": "小费文化"
-      },
-      {
-        "en": "struggle to",
-        "cn": "难以做到…",
-        "note": "struggle to adapt 难以适应"
-      }
-    ]
-  },
-  {
-    "id": "b243323d85",
-    "title": "Lifting weights helps you to live longer",
-    "url": "https://breakingnewsenglish.com/2606/260625-strength-training.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-06-25",
-    "time": "00:30",
-    "summary": "研究表明规律的力量训练有助于延长寿命。健康健身话题,strength training、researcher、longer 等词,读完还能顺便被安利去撸铁。",
-    "reason": "健身 + 长寿是全民话题,词汇简单实用,适合刚开始每天读英文的人破冰。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 34,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Researchers have reported that regular strength training may help us to live longer.",
-    "expressions": [
-      {
-        "en": "strength training",
-        "cn": "力量训练"
-      },
-      {
-        "en": "live longer",
-        "cn": "活得更久"
-      },
-      {
-        "en": "researcher",
-        "cn": "研究人员"
-      }
-    ]
-  },
-  {
-    "id": "9b8b2b329d",
-    "title": "Hydration breaks booed at World Cup",
-    "url": "https://breakingnewsenglish.com/2606/260622-hydration-breaks-world-cup.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-06-22",
-    "time": "00:30",
-    "summary": "世界杯引入补水暂停引发球迷不满。体育时事短文,hydration、boo、introduce 等词,配合分级难度适合快速泛读。",
-    "reason": "球迷视角的真实吐槽,读起来有情绪、不枯燥,泛读练语感正合适。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 34,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Football fans worldwide are not happy about the introduction of hydration breaks at the World Cup.",
-    "expressions": [
-      {
-        "en": "hydration break",
-        "cn": "补水暂停"
-      },
-      {
-        "en": "boo",
-        "cn": "喝倒彩、发出嘘声",
-        "note": "观众表达不满"
-      },
-      {
-        "en": "introduce",
-        "cn": "引入、推出（新规）"
-      }
-    ]
-  },
-  {
-    "id": "8de544f2bb",
-    "title": "Google releases free 'Google Earth' flight simulator",
-    "url": "https://breakingnewsenglish.com/2606/260618-google-earth.html",
-    "source": "Breaking News English",
-    "source_weight": 0.85,
-    "captured": "2026-07-21",
-    "published": "2026-06-18",
-    "time": "00:30",
-    "summary": "谷歌宣布向公众免费开放其飞行模拟器。科技新品短新闻,release、simulator、available 等词实用,句子结构清晰好模仿。",
-    "reason": "科技新品词汇是写作万能素材,句子短、结构清,适合抄下来仿写练句式。",
-    "topic": "reading",
-    "featured": false,
-    "heat": 34,
-    "sources": [],
-    "lang": "en",
-    "lead_en": "Google has announced it will make its flight simulator available to the public.",
-    "expressions": [
-      {
-        "en": "flight simulator",
-        "cn": "飞行模拟器"
-      },
-      {
-        "en": "release",
-        "cn": "发布、推出"
-      },
-      {
-        "en": "make sth available to",
-        "cn": "向…开放",
-        "note": "available to the public 向公众开放"
-      }
-    ]
-  },
-  {
-    "id": "seed-podcast-picks",
-    "title": "通勤路上听什么:2026 年值得订阅的 8 档英语播客",
-    "url": "https://www.hjenglish.com/tingli/",
-    "source": "站内整理",
-    "source_weight": 0.8,
-    "captured": "2026-07-18",
-    "published": "2026-07-12",
-    "time": "17:48",
-    "summary": "按难度分层:入门 Culips、进阶 All Ears English、原速 The Daily 与 Planet Money。通勤泛听选熟悉话题,别贪原速新闻,听得懂 80% 的材料才涨听力。",
-    "reason": "通勤那半小时别浪费,按难度选一档,泛听也能悄悄涨听力。",
-    "topic": "listening",
-    "featured": false,
-    "heat": 34,
-    "sources": [],
-    "lang": "zh",
-    "lead_en": "",
-    "expressions": []
+    "expressions": [],
+    "evergreen": true
   }
 ];
