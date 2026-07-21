@@ -35,6 +35,10 @@ python pipeline/pipeline.py
 python pipeline/pipeline.py --seed-only --no-ai   # 离线:只用人工种子
 ```
 
+每次跑完除了 `web/src/data.js`,还会产出 `today_post.md` —— 用当天真实数据排好的
+小红书/公众号日更文案,可直接粘贴。中国的内容发现靠封闭平台,网站当归档、日更帖当增长引擎。
+流量/SEO 的完整路线与待办见 [SEO.md](SEO.md)。
+
 > 无 API key 时,抓取条目的中文摘要来自内置 `editorial.json`;设置 key 后
 > 由 AI 自动生成,`editorial.json` 仍可对个别条目做最终覆盖。当前 `data.js`
 > 即由 `--no-ai` 一条命令真实跑出:Breaking News English 当日新闻 + BBC 常青节目。

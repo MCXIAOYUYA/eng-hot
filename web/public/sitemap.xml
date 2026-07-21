@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 目前是单页站,只有一个 URL。等步骤③做了 SSG、给考试节点内容各自出静态页后,
+     在这里补上每个页面的 <url>(那才是百度真正能收录、能吃搜索流量的落地页)。
+     提交入口:百度搜索资源平台 / Google Search Console,手动提交本文件 URL。 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mcxiaoyuya.github.io/eng-hot/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

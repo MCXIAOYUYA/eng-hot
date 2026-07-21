@@ -509,6 +509,74 @@ def emit(items: list[Item]) -> None:
     print(f"== 输出 {len(items)} 条 → web/src/data.js ==")
 
 
+# ----------------------------------------------------------------------------
+# 8. 日更帖 —— 把当天真实数据排成可直接粘贴的小红书/公众号文案
+#    中国的内容发现靠封闭平台(小红书/公众号),不靠开放网页搜索。网站当归档,
+#    日更帖当增长引擎、回链站点。素材流水线已经产出,顺手排个版几乎零成本。
+#    铁律同前端:只用数据里真有的东西,凑不满就少发几个,不编。
+# ----------------------------------------------------------------------------
+SITE_URL = "https://mcxiaoyuya.github.io/eng-hot/"
+
+
+def build_post(items: list[Item]) -> str:
+    live = [it for it in items if not is_library(it)]
+    lib = [it for it in items if is_library(it)]
+
+    # 攒 5 个重点表达:先时效流后素材库,按出现顺序去重
+    exprs, seen = [], set()
+    for it in live + lib:
+        for e in (it.expressions or []):
+            en = e.get("en", "")
+            if en and en.lower() not in seen:
+                seen.add(en.lower())
+                exprs.append(e)
+            if len(exprs) >= 5:
+                break
+        if len(exprs) >= 5:
+            break
+
+    # 「读条新闻练语感」优先挑有英文导语的新闻(练的就是英文);
+    # 都没有再退回热度最高那条
+    en_news = [it for it in live if it.lead_en]
+    top = max(en_news or live, key=lambda x: x.heat) if live else None
+    d = datetime.now(timezone.utc)
+    wd = ["一", "二", "三", "四", "五", "六", "日"][d.weekday()]
+    date_cn = f"{d.month}月{d.day}日 周{wd}"
+
+    L = []
+    L.append(f"【每日5个地道表达】{date_cn}")
+    L.append("")
+    if exprs:
+        L.append(f"今天从 BBC / 外刊里挑了 {len(exprs)} 个能直接用的表达👇")
+        L.append("")
+        for i, e in enumerate(exprs, 1):
+            line = f"{i}. {e['en']} —— {e['cn']}"
+            if e.get("note"):
+                line += f"（{e['note']}）"
+            L.append(line)
+        L.append("")
+    if top:
+        L.append("📰 顺便读条新闻练语感:")
+        L.append(f"「{top.title}」")
+        if top.lead_en:
+            L.append(top.lead_en)
+        L.append("")
+    L.append("每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,")
+    L.append(f"完整版和往期都在 ENG·HOT:{SITE_URL}")
+    L.append("")
+    # 话题标签 —— 平台靠这个分发,给足高频学习标签
+    L.append("#英语学习 #每日英语 #地道表达 #四六级 #雅思 #BBC #英语口语 #英语单词")
+    return "\n".join(L)
+
+
+def emit_post(items: list[Item]) -> None:
+    post = build_post(items)
+    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "today_post.md")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(post + "\n")
+    print("== 日更帖 → today_post.md(直接粘贴到小红书/公众号)==")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-ai", action="store_true", help="跳过 AI 摘要")
@@ -529,6 +597,7 @@ def main():
     for it in items:
         it.heat = heat_score(it)
     emit(items)
+    emit_post(items)
 
 
 if __name__ == "__main__":

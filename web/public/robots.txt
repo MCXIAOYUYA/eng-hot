@@ -1,0 +1,9 @@
+# 注意:这是 GitHub Pages 项目页,本文件实际路径是
+# mcxiaoyuya.github.io/eng-hot/robots.txt —— 而爬虫只认域名根的
+# mcxiaoyuya.github.io/robots.txt(归根仓库管,不是本项目)。
+# 所以这份 robots 的抓取规则基本不被遵守,留着仅作声明与 sitemap 指引。
+# 真要控制抓取,得换独立域名(见步骤④)。
+User-agent: *
+Allow: /
+
+Sitemap: https://mcxiaoyuya.github.io/eng-hot/sitemap.xml
