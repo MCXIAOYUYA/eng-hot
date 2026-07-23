@@ -1,4 +1,4 @@
-【每日5个地道表达】7月21日 周二
+【每日5个地道表达】7月23日 周四
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. tech giant —— 科技巨头
 
 📰 顺便读条新闻练语感:
-「New species of monkey found in Congo rainforest」
-Anthropologists have discovered a previously unknown monkey that has distinctive orange lips and a deep roaring whoop.
+「Knee surgery may do more harm than good」
+A new study says knee surgery may do more harm than good.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
