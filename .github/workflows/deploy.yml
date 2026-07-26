@@ -44,6 +44,11 @@ jobs:
         # 仓库不提交 package-lock.json:Windows 生成的锁文件只含 win32 原生
         # 二进制,会让 Linux runner 缺 @rollup/rollup-linux-x64-gnu 而构建失败。
         # 这里用 npm install 现场按 runner 平台解析依赖,稳妥跨平台。
+        #
+        # PAGES_BASE=/eng-hot/ —— GitHub Pages 是项目页,资源在 /eng-hot/ 下。
+        # 主站已迁 Cloudflare Pages(见 SEO.md),那边不设此变量 → base "/"。
+        env:
+          PAGES_BASE: /eng-hot/
         run: |
           npm install --no-audit --no-fund
           npm run build
