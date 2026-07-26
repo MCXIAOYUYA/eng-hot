@@ -458,13 +458,17 @@ const prevDay = (day) => {
   return localDay(d);
 };
 
-const STEPS = ["news", "expr", "shadow"];
-
 /* 打卡状态存在 localStorage:{ day, steps, streak, last }
    day  = 当前这份剂量属于哪天(跨天自动重置勾选)
-   last = 最后一次「三步做完」的日期,用来判断连续是否断掉
-   注意用本地日期,不是数据里的 UTC captured —— 打卡记的是"用户哪天学的" */
-function useDose() {
+   last = 最后一次「当天全部做完」的日期,用来判断连续是否断掉
+   注意用本地日期,不是数据里的 UTC captured —— 打卡记的是"用户哪天学的"
+
+   stepKeys 是当天**实际有素材、真渲染出来**的步骤。
+   以前这里写死三步(news/expr/shadow),但每一步只在对应素材存在时才渲染 ——
+   哪天抓取没出英文新闻、或种子里没有跟练条目,那一步的勾选框就够不到,
+   allDone 永远不成立 → streak 永远涨不上去,打卡这个核心循环静默失效。
+   改成按当天真渲染的步骤算完成度。 */
+function useDose(stepKeys) {
   const today = localDay();
   const [st, setSt] = useState(() => {
     let s = { day: today, steps: {}, streak: 0, last: "" };
@@ -480,34 +484,37 @@ function useDose() {
 
   useEffect(() => { localStorage.setItem("enghot-dose", JSON.stringify(st)); }, [st]);
 
+  // 当天有几步、这几步是否都勾了 —— 只认真渲染出来的步骤,空剂量不算完成
+  const allDoneOf = (steps) => stepKeys.length > 0 && stepKeys.every((k) => steps[k]);
+
   const toggle = (k) => setSt((s) => {
     const steps = { ...s.steps, [k]: !s.steps[k] };
-    const done = STEPS.every((x) => steps[x]);
-    // 三步齐了、且今天还没记过 → 连上一天则 +1,否则从 1 重新开始
-    if (done && s.last !== s.day) {
+    // 当天的步骤全勾了、且今天还没记过 → 连上一天则 +1,否则从 1 重新开始
+    if (allDoneOf(steps) && s.last !== s.day) {
       return { ...s, steps, streak: s.last === prevDay(s.day) ? s.streak + 1 : 1, last: s.day };
     }
     return { ...s, steps };
   });
 
-  const doneCount = STEPS.filter((k) => st.steps[k]).length;
-  return { steps: st.steps, streak: st.streak, doneCount, allDone: doneCount === STEPS.length, toggle };
+  const doneCount = stepKeys.filter((k) => st.steps[k]).length;
+  return { steps: st.steps, streak: st.streak, doneCount, total: stepKeys.length, allDone: allDoneOf(st.steps), toggle };
 }
 
 function DailyDose({ news, expressions, shadow, onOpen }) {
-  const { steps, streak, doneCount, allDone, toggle } = useDose();
-  const Row = ({ k, no, label, children }) => (
-    <div className={"step" + (steps[k] ? " done" : "")}>
-      <span className="no">{steps[k] ? <Check size={12} /> : no}</span>
-      <div className="body">
-        <div className="k">{label}</div>
-        {children}
-      </div>
-      <button className="stepbtn" title={steps[k] ? "取消" : "标记完成"} onClick={() => toggle(k)}>
-        <Check size={15} />
-      </button>
-    </div>
-  );
+  // 先按当天实际有的素材拼出步骤清单 —— 顺序编号也跟着走,缺一步不会留个空号
+  const stepDefs = [];
+  if (news) stepDefs.push({ k: "news", label: "读一条新闻", body: <div className="v" onClick={() => onOpen(news)}>{news.title}</div> });
+  if (expressions.length > 0) stepDefs.push({
+    k: "expr", label: `记 ${expressions.length} 个表达`,
+    body: <div className="mini">{expressions.map((e, i) => <span key={i}><b>{e.en}</b> {e.cn}</span>)}</div>,
+  });
+  if (shadow) stepDefs.push({ k: "shadow", label: "跟读一次", body: <div className="v" onClick={() => onOpen(shadow)}>{shadow.title}</div> });
+
+  const { steps, streak, doneCount, total, allDone, toggle } = useDose(stepDefs.map((s) => s.k));
+
+  // 一份素材都没有(抓取全挂)→ 不渲染打卡,免得出现「0/0 今天练完了」
+  if (total === 0) return null;
+
   return (
     <div className="dose">
       <div className="dh">
@@ -517,31 +524,26 @@ function DailyDose({ news, expressions, shadow, onOpen }) {
         </span>
       </div>
       <div className="sub">
-        三件事做完就算今天练过了 —— 别贪多,能天天做完比一次做很多有用。
-        <span className="prog"> · {doneCount}/3</span>
+        {total} 件事做完就算今天练过了 —— 别贪多,能天天做完比一次做很多有用。
+        <span className="prog"> · {doneCount}/{total}</span>
       </div>
 
       {allDone && (
         <div className="alldone"><Check size={15} /> 今天练完了。明天这个时候再来，连续就变成 {streak + 1} 天。</div>
       )}
 
-      {news && (
-        <Row k="news" no="1" label="读一条新闻">
-          <div className="v" onClick={() => onOpen(news)}>{news.title}</div>
-        </Row>
-      )}
-      {expressions.length > 0 && (
-        <Row k="expr" no="2" label={`记 ${expressions.length} 个表达`}>
-          <div className="mini">
-            {expressions.map((e, i) => <span key={i}><b>{e.en}</b> {e.cn}</span>)}
+      {stepDefs.map((s, i) => (
+        <div className={"step" + (steps[s.k] ? " done" : "")} key={s.k}>
+          <span className="no">{steps[s.k] ? <Check size={12} /> : i + 1}</span>
+          <div className="body">
+            <div className="k">{s.label}</div>
+            {s.body}
           </div>
-        </Row>
-      )}
-      {shadow && (
-        <Row k="shadow" no="3" label="跟读一次">
-          <div className="v" onClick={() => onOpen(shadow)}>{shadow.title}</div>
-        </Row>
-      )}
+          <button className="stepbtn" title={steps[s.k] ? "取消" : "标记完成"} onClick={() => toggle(s.k)}>
+            <Check size={15} />
+          </button>
+        </div>
+      ))}
     </div>
   );
 }
