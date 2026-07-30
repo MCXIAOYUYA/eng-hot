@@ -1,4 +1,4 @@
-【每日5个地道表达】7月29日 周三
+【每日5个地道表达】7月30日 周四
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. tech giant —— 科技巨头
 
 📰 顺便读条新闻练语感:
-「Tick bites are on the rise around the world」
-Doctors worldwide are becoming concerned about the increasing prevalence of ticks.
+「France wildfires&colon; City of Bordeaux faces evacuation」
+A terrifying wildfire is getting close to the southern French city of Bordeaux.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
