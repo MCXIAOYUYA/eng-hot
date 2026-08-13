@@ -1,4 +1,4 @@
-【每日5个地道表达】8月12日 周三
+【每日5个地道表达】8月13日 周四
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. century —— 世纪
 
 📰 顺便读条新闻练语感:
-「Deadly flowers could help create new medicines」
-Two poisonous plants could be used to make new medicines.
+「Scientists take sharpest-ever photos of the Sun」
+Astronomers have taken the best-ever photos of the Sun.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
