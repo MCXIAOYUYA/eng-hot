@@ -1,4 +1,4 @@
-【每日5个地道表达】8月25日 周二
+【每日5个地道表达】8月27日 周四
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. cycle —— 骑车（英式常用，美式多说 bike）
 
 📰 顺便读条新闻练语感:
-「Extreme heat more dangerous for people over 60」
-Extreme heat may have a harsher effect on older people than doctors previously thought.
+「Bali jails tourist for not respecting Day of Silence」
+A tourist has been given a one-year jail sentence in Bali for insulting an important Hindu festival.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
