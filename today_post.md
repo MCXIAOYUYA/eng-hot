@@ -1,12 +1,12 @@
-【每日5个地道表达】8月27日 周四
+【每日5个地道表达】8月28日 周五
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
 1. cope with —— 应对、扛得住（后接压力、困难）
 2. under pressure —— 在压力之下（高压时刻的固定说法）
 3. penalty —— 点球、罚球
-4. commute —— 通勤（名词动词同形，commute to work）
-5. cycle —— 骑车（英式常用，美式多说 bike）
+4. I do —— （婚礼上）我愿意
+5. the big day —— 大喜之日、重要的日子
 
 📰 顺便读条新闻练语感:
 「Bali jails tourist for not respecting Day of Silence」
