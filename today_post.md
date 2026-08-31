@@ -1,4 +1,4 @@
-【每日5个地道表达】8月30日 周日
+【每日5个地道表达】8月31日 周一
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. the big day —— 大喜之日、重要的日子
 
 📰 顺便读条新闻练语感:
-「Bali jails tourist for not respecting Day of Silence」
-A tourist has been given a one-year jail sentence in Bali for insulting an important Hindu festival.
+「Australia bans AI songs from official music charts」
+Australia has banned songs that have been "wholly AI generated" from entering the country's official music charts.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
