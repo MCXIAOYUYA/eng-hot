@@ -1,12 +1,12 @@
-【每日5个地道表达】9月3日 周四
+【每日5个地道表达】9月4日 周五
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
-1. cope with —— 应对、扛得住（后接压力、困难）
-2. under pressure —— 在压力之下（高压时刻的固定说法）
-3. penalty —— 点球、罚球
-4. I do —— （婚礼上）我愿意
-5. the big day —— 大喜之日、重要的日子
+1. I do —— （婚礼上）我愿意
+2. the big day —— 大喜之日、重要的日子
+3. change one's mind —— 改变主意
+4. have feelings for sb —— 对某人有感觉
+5. get down to business —— 言归正传、开始谈正事（开会切入正题的经典句）
 
 📰 顺便读条新闻练语感:
 「Australia bans AI songs from official music charts」
