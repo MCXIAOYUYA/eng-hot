@@ -1,4 +1,4 @@
-【每日5个地道表达】9月13日 周日
+【每日5个地道表达】9月14日 周一
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. get down to business —— 言归正传、开始谈正事（开会切入正题的经典句）
 
 📰 顺便读条新闻练语感:
-「Australia bans AI songs from official music charts」
-Australia has banned songs that have been "wholly AI generated" from entering the country's official music charts.
+「CEO loses case to get back gifts from ex-girlfriend」
+A man in Singapore has lost a court case to get back hundreds of thousands of dollars of gifts that he had showered on his ex-girlfriend.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
