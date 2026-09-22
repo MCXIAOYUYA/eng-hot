@@ -1,4 +1,4 @@
-【每日5个地道表达】9月21日 周一
+【每日5个地道表达】9月22日 周二
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. get down to business —— 言归正传、开始谈正事（开会切入正题的经典句）
 
 📰 顺便读条新闻练语感:
-「Sleeping with a light on could damage the heart」
-Researchers say sleeping with a light on could be bad for you.
+「Sustainable Development Goals not on track, says UN」
+The United Nations has warned that the world is not on track to achieve its SDGs by 2030.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
