@@ -1,4 +1,4 @@
-【每日5个地道表达】9月28日 周一
+【每日5个地道表达】9月29日 周二
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. get down to business —— 言归正传、开始谈正事（开会切入正题的经典句）
 
 📰 顺便读条新闻练语感:
-「Toys R Us to open 120 new stores in USA」
-Toys R Us is planning to open 120 new stores in the USA in the near future.
+「Bus passengers to be fined for playing loud music」
+Singapore has introduced new fines of up to $500 for blaring out music on buses that annoys other passengers.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
