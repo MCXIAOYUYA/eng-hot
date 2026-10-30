@@ -1,4 +1,4 @@
-【每日5个地道表达】10月29日 周四
+【每日5个地道表达】10月30日 周五
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. get down to business —— 言归正传、开始谈正事（开会切入正题的经典句）
 
 📰 顺便读条新闻练语感:
-「Mummy removed from exhibition over 'lack of consent'」
-A museum removed the remains of an ancient Egyptian mummy from a display due to a lack of consent.
+「World-famous London shopping street pedestrianized」
+London's most famous shopping streets has been pedestrianized.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
