@@ -1,4 +1,4 @@
-【每日5个地道表达】11月1日 周日
+【每日5个地道表达】11月2日 周一
 
 今天从 BBC / 外刊里挑了 5 个能直接用的表达👇
 
@@ -9,8 +9,8 @@
 5. get down to business —— 言归正传、开始谈正事（开会切入正题的经典句）
 
 📰 顺便读条新闻练语感:
-「World-famous London shopping street pedestrianized」
-London's most famous shopping streets has been pedestrianized.
+「Study finds majority of pilots nod off mid-flight」
+A new report has raised serious concerns about pilot fatigue.
 
 每天 5 分钟,读一条新闻 + 记 5 个表达 + 跟读一次,
 完整版和往期都在 ENG·HOT:https://mcxiaoyuya.github.io/eng-hot/
